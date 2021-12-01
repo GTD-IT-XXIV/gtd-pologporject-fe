@@ -1,3 +1,5 @@
+import { Text } from "../common/text";
+
 export default function Home(props) {
-  return <div>Home</div>;
+  return <Text>Home</Text>;
 }
