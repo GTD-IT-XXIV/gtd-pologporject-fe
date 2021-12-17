@@ -1,3 +1,3 @@
-export default function Game(props) {
+export default function ERGame(props) {
   return <div>Game</div>;
 }

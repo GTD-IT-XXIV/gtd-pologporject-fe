@@ -3,7 +3,11 @@ import React from "react";
 const FacebookLogo = () => {
   return (
     <div className="FacebookLogo">
-      <a href="https://www.facebook.com/PINTUGTD/1">
+      <a
+        href="https://www.facebook.com/PINTUGTD/1"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <svg
           width="60"
           height="62"

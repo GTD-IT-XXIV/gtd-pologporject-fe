@@ -22,6 +22,10 @@ export default function Scripts() {
         rel="stylesheet"
       ></link>
       <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Poppins:wght@100&display=swap"
+        rel="stylesheet"
+      ></link>
+      <link
         href="http://fonts.cdnfonts.com/css/men-of-nihilist"
         rel="stylesheet"
       ></link>
