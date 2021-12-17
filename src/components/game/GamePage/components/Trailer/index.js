@@ -1,6 +1,6 @@
 import React from "react";
 import YouTube from "react-youtube";
-
+import "./style.css";
 const Trailer = () => {
   const _onReady = (event) => {
     // access to player in all event handlers via event.target

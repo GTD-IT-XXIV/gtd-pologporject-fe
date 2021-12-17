@@ -1,54 +1,28 @@
-.GameDetailSection {
-  background-color: black;
+.SynopsisSection {
+  background: linear-gradient(to right, #252525 50%, black 50%);
   width: 100%;
-  height: 150vh;
-  padding: 4vh;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10vh;
 }
 
-.Details {
-  margin-bottom: 5vh;
-}
-.DetailTitle {
+.SynopsisTitle {
   text-align: center;
-  font-family: "Poppins", serif;
-  color: white;
-  font-weight: 900;
-  font-size: 4vh;
-  margin-bottom: 0.5vh;
-}
-
-.DetailDescription {
-  text-align: center;
-  font-family: "Poppins", serif;
-  color: white;
-  font-weight: 900;
-  font-size: 3.5vh;
-}
-
-.DetailDescriptionRed {
-  text-align: center;
-  font-family: "Poppins", serif;
-  color: #cc0000;
-  font-weight: 900;
-  font-size: 3.5vh;
-}
-
-.TrailerTitle {
-  text-align: center;
-  margin-top: 10vh;
   font-family: "Men of Nihilist", sans-serif;
   color: white;
   font-size: 6vh;
 }
 
-.TrailerTitleRed {
+.SynopsisTitleRed {
   color: #cc0000;
 }
-
-.TrailerVideo {
-}
-.TrailerSection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.SynopsisText {
+  text-align: center;
+  width: 62%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 2.7vh;
+  color: white;
 }
