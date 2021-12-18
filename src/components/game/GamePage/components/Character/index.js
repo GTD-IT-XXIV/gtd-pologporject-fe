@@ -40,7 +40,7 @@ const Character = ({ pages }) => {
             );
           })}
 
-          {activeIndex !== pages.length ? (
+          {activeIndex !== pages.length - 1 ? (
             <RightArrowWhite
               onClick={() => {
                 setActiveIndex(activeIndex + 1);
