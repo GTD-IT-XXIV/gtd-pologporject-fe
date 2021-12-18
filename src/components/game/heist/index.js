@@ -1,3 +1,3 @@
-export default function Game(props) {
+export default function HGame(props) {
   return <div>Game</div>;
 }

@@ -3,7 +3,11 @@ import React from "react";
 const InstagramLogo = () => {
   return (
     <div>
-      <a href="https://www.instagram.com/pintugtd/">
+      <a
+        href="https://www.instagram.com/pintugtd/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <svg
           width="65"
           height="65"
