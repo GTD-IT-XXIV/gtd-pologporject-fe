@@ -1,9 +1,10 @@
 import GamePage from "../GamePage";
+import { casefileProps } from "./constant";
 
-export default function CFGame(props) {
+export default function CFGame() {
   return (
     <div>
-      <GamePage />
+      <GamePage {...casefileProps} />
     </div>
   );
 }

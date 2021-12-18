@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./style.css";
-import image from "../../assets/image.png";
-const Countdown = () => {
+
+const Countdown = ({ date, title, genre, CTAText, image }) => {
   const [timerDays, setTimerDays] = useState("00");
   const [timerHours, setTimerHours] = useState("00");
   const [timerMinutes, setTimerMinutes] = useState("00");
@@ -10,7 +10,7 @@ const Countdown = () => {
   let interval = useRef();
 
   const startTimer = () => {
-    const countdownDate = new Date("January 7, 2022 00:00:00").getTime();
+    const countdownDate = new Date(date).getTime();
 
     interval = setInterval(() => {
       const now = new Date().getTime();
@@ -45,8 +45,8 @@ const Countdown = () => {
       className="CountdownSection"
       style={{ backgroundImage: `url(${image}` }}
     >
-      <div className="GameTitle">escape room</div>
-      <div className="GameGenre">HORROR | ADVENTURE</div>
+      <div className="GameTitle">{title}</div>
+      <div className="GameGenre">{genre}</div>
       <div className="TimeBoxes">
         <div className="TimeBox">
           <div className="TimeValue">{timerDays}</div>
@@ -68,7 +68,7 @@ const Countdown = () => {
           <div className="TimeUnit">seconds</div>
         </div>
       </div>
-      <a className="CTA-Buy">BUY TICKET</a>
+      <a className="CTA-Buy">{CTAText}</a>
     </div>
   );
 };
