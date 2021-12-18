@@ -1,5 +1,7 @@
-import { Text } from "../common/text";
+import React from "react";
 
-export default function Home(props) {
-  return <Text>Home</Text>;
-}
+const Home = () => {
+  return <div></div>;
+};
+
+export default Home;
