@@ -5,6 +5,7 @@ import Scripts from "./scripts";
 import Footer from "./components/common/footer";
 
 function App() {
+  document.body.style = "background: black;";
   return (
     <>
       <Scripts></Scripts>
@@ -23,8 +24,8 @@ function App() {
             </Routes>
           }
         />
+        <Footer />
       </Router>
-      <Footer />
     </>
   );
 }

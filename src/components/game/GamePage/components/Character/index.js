@@ -40,7 +40,7 @@ const Character = ({ pages }) => {
             );
           })}
 
-          {activeIndex !== pages.length ? (
+          {activeIndex !== pages.length - 1 ? (
             <RightArrowWhite
               onClick={() => {
                 setActiveIndex(activeIndex + 1);
@@ -54,7 +54,13 @@ const Character = ({ pages }) => {
           {pages.map((page, index) => {
             let isActive = parseInt(`${index}`) === activeIndex;
             return (
-              <span key={index} className={isActive ? "RedDot" : "GrayDot"}>
+              <span
+                key={index}
+                onClick={() => {
+                  setActiveIndex(parseInt(`${index}`));
+                }}
+                className={isActive ? "RedDot" : "GrayDot"}
+              >
                 •
               </span>
             );

@@ -1,0 +1,66 @@
+.GamesDisplaySection {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  padding: 10vh 20vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.GamesDisplay {
+  width: 33%;
+  height: 100%;
+  border: 2px solid white;
+  padding: 2vh;
+}
+
+.GamesImage {
+  height: 85%;
+  background-size: contain;
+  width: 100%;
+}
+
+.GamesDate {
+  text-align: center;
+  margin-top: 3vh;
+  font-family: "Poppins", serif;
+  font-size: 4vh;
+  font-weight: 900;
+  color: white;
+}
+
+.GamesImage > div {
+  visibility: visible;
+  background: rgba(0, 0, 0, 0.85);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.GamesImage:hover > div {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 500ms;
+  cursor: pointer;
+}
+
+.GamesImageOverlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.GamesButton {
+  margin-top: 1vh;
+  width: 40%;
+  font-family: "Poppins", serif;
+  font-size: 3vh;
+  padding: 0.5vh 3vh;
+  font-weight: 900;
+  color: white;
+  background: none;
+  text-align: center;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+}

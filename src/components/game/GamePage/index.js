@@ -11,7 +11,9 @@ const GamePage = ({
   SynopsisProps,
   CharacterProps,
 }) => {
-  console.log(CountdownProps);
+  useEffect(() => {
+    window.scrollTo({ top: -5000, behavior: "smooth" });
+  }, []);
   return (
     <div>
       <Countdown {...CountdownProps} />

@@ -64,11 +64,13 @@
 .RedDot {
   color: red;
   font-size: 5vh;
+  cursor: pointer;
 }
 
 .GrayDot {
   color: gray;
   font-size: 5vh;
+  cursor: pointer;
 }
 
 .RightArrowWhite:hover {
