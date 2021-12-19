@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import EscapeLogo from "./assets/EscapeLogo";
 import MagnifyLogo from "./assets/MagnifyLogo";
 import PeopleLogo from "./assets/PeopleLogo";
@@ -14,6 +14,9 @@ const Home = () => {
   const executeScroll = () =>
     myRef.current.scrollIntoView({ behavior: "smooth" });
 
+  useEffect(() => {
+    window.scrollTo({ top: -5000, behavior: "smooth" });
+  }, []);
   return (
     <div>
       <Title onClick={executeScroll} />

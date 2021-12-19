@@ -12,7 +12,7 @@ const GamePage = ({
   CharacterProps,
 }) => {
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: -5000, behavior: "smooth" });
   }, []);
   return (
     <div>
