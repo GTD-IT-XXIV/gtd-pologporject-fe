@@ -43,7 +43,7 @@ const Countdown = ({ date, title, genre, CTAText, image }) => {
   return (
     <div
       className="CountdownSection"
-      style={{ backgroundImage: `url(${image}` }}
+      style={{ backgroundImage: `url(${image})` }}
     >
       <div className="GameTitle">{title}</div>
       <div className="GameGenre">{genre}</div>

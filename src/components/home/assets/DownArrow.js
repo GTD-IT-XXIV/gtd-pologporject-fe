@@ -1,8 +1,8 @@
 import React from "react";
 
-const DownArrow = () => {
+const DownArrow = ({ onClick }) => {
   return (
-    <div>
+    <div className="DownArrow" onClick={onClick}>
       <svg
         width="64"
         height="64"
