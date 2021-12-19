@@ -6,8 +6,10 @@ import Poster3 from "../../assets/Poster2.png";
 import DollarSign from "../../assets/DollarSign";
 import PuzzlePiece from "../../assets/PuzzlePiece";
 import Suitcase from "../../assets/Suitcase";
-
+import { useNavigate } from "react-router-dom";
 const GameDisplay = ({ divRef }) => {
+  const navigate = useNavigate();
+
   return (
     <div className="GamesDisplaySection" ref={divRef}>
       <div className="GamesDisplay">
@@ -15,7 +17,12 @@ const GameDisplay = ({ divRef }) => {
           className="GamesImage"
           style={{ backgroundImage: `url(${Poster})` }}
         >
-          <div className="GamesImageOverlay">
+          <div
+            className="GamesImageOverlay"
+            onClick={() => {
+              navigate("escaperoom");
+            }}
+          >
             <PuzzlePiece />
             <div className="GamesButton">PLAY</div>
           </div>
@@ -28,7 +35,12 @@ const GameDisplay = ({ divRef }) => {
           className="GamesImage"
           style={{ backgroundImage: `url(${Poster2})` }}
         >
-          <div className="GamesImageOverlay">
+          <div
+            className="GamesImageOverlay"
+            onClick={() => {
+              navigate("casefile");
+            }}
+          >
             <Suitcase />
             <div className="GamesButton">PLAY</div>
           </div>
@@ -41,7 +53,12 @@ const GameDisplay = ({ divRef }) => {
           className="GamesImage"
           style={{ backgroundImage: `url(${Poster3})` }}
         >
-          <div className="GamesImageOverlay">
+          <div
+            className="GamesImageOverlay"
+            onClick={() => {
+              navigate("heist");
+            }}
+          >
             <DollarSign />
             <div className="GamesButton">PLAY</div>
           </div>
