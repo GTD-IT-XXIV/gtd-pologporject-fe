@@ -1,12 +1,12 @@
 .Footer {
-  width: 100%;
+  width: 100vw;
   height: 30vh;
   background-color: black;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 15vh 3vh 10vh 3vh;
+  padding: 3vh;
 }
 
 .GTD {
@@ -14,7 +14,12 @@
   color: white;
   font-size: 6vh;
   cursor: pointer;
-  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 33%;
+  height: 50%;
 }
 
 .Unsolved {
@@ -22,40 +27,57 @@
 }
 
 .Copyright {
+  height: 50%;
   font-size: 2.2vh;
   text-align: center;
-  width: 30vh;
+  width: 34%;
   color: white;
   font-family: "Poppins", "sans-serif";
-  margin-right: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
 }
 
 .Logos {
   display: flex;
   flex-direction: row;
+  width: 33%;
+  height: 50%;
+  justify-content: end;
+  align-items: center;
 }
-
 .FacebookLogo {
-  margin-left: 3vh;
+  margin-left: 2vw;
 }
 
-svg:hover path {
+.Logo:hover path {
   transition: 0.5s;
   fill: red;
 }
 
 @media screen and (max-width: 768px) {
+  .Footer {
+    height: 15vh;
+  }
   .GTD {
-    font-size: 3vh;
+    font-size: 2.5vh;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
   }
   .Copyright {
     margin: 0;
-    font-size: 2vh;
+    font-size: 1.5vh;
+    justify-content: center;
   }
   .Logos {
     flex-direction: column;
+    align-items: end;
+    justify-content: center;
   }
-  .InstagramLogo {
-    margin-left: 3vh;
+  .Logo {
+    width: 48px;
+    height: 48px;
   }
 }

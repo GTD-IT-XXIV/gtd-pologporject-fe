@@ -9,6 +9,7 @@ const DownArrow = ({ onClick }) => {
         viewBox="0 0 64 64"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        className="DownArrow"
       >
         <path
           fill-rule="evenodd"

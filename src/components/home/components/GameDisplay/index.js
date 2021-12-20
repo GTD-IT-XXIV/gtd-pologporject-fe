@@ -12,17 +12,17 @@ const GameDisplay = ({ divRef }) => {
 
   return (
     <div className="GamesDisplaySection" ref={divRef}>
-      <div className="GamesDisplay">
+      <div
+        className="GamesDisplay"
+        onClick={() => {
+          navigate("escaperoom");
+        }}
+      >
         <div
           className="GamesImage"
           style={{ backgroundImage: `url(${Poster})` }}
         >
-          <div
-            className="GamesImageOverlay"
-            onClick={() => {
-              navigate("escaperoom");
-            }}
-          >
+          <div className="GamesImageOverlay">
             <PuzzlePiece />
             <div className="GamesButton">PLAY</div>
           </div>
@@ -30,17 +30,17 @@ const GameDisplay = ({ divRef }) => {
         <div className="GamesDate">15 January</div>
       </div>
 
-      <div className="GamesDisplay">
+      <div
+        className="GamesDisplay"
+        onClick={() => {
+          navigate("casefile");
+        }}
+      >
         <div
           className="GamesImage"
           style={{ backgroundImage: `url(${Poster2})` }}
         >
-          <div
-            className="GamesImageOverlay"
-            onClick={() => {
-              navigate("casefile");
-            }}
-          >
+          <div className="GamesImageOverlay">
             <Suitcase />
             <div className="GamesButton">PLAY</div>
           </div>
@@ -48,17 +48,17 @@ const GameDisplay = ({ divRef }) => {
         <div className="GamesDate">15 January</div>
       </div>
 
-      <div className="GamesDisplay">
+      <div
+        className="GamesDisplay"
+        onClick={() => {
+          navigate("heist");
+        }}
+      >
         <div
           className="GamesImage"
           style={{ backgroundImage: `url(${Poster3})` }}
         >
-          <div
-            className="GamesImageOverlay"
-            onClick={() => {
-              navigate("heist");
-            }}
-          >
+          <div className="GamesImageOverlay">
             <DollarSign />
             <div className="GamesButton">PLAY</div>
           </div>

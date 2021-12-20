@@ -14,6 +14,7 @@ const FacebookLogo = () => {
           viewBox="0 0 71 72"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          className="Logo"
         >
           <g clip-path="url(#clip0_226_265)">
             <path

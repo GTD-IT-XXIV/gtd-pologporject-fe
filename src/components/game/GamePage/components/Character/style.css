@@ -91,8 +91,8 @@
   .CharacterPicture {
     height: 55px;
   }
-  svg {
-    width: 30px;
-    height: 30px;
+  .Arrow {
+    height: 40px;
+    width: 40px;
   }
 }

@@ -41,7 +41,7 @@ const Home = () => {
 
         <div className="HowToPlaySection">
           <div className="HowToPlaySubSection">
-            <div className="HowToPlayDescription">
+            <div className="HowToPlayDescriptionOnRight">
               <div className="HowToPlayDescriptionLeft">
                 <div className="HowToPlayDescriptionTitle"></div>
                 <div className="HowToPlayDescriptionText"></div>
@@ -58,11 +58,11 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="HowToPlaySubSection">
+          <div className="HowToPlaySubSectionLine">
             <div className="HowToPlayLine"></div>
           </div>
           <div className="HowToPlaySubSection">
-            <div className="HowToPlayDescription">
+            <div className="HowToPlayDescriptionOnLeft">
               <div className="HowToPlayDescriptionLeft">
                 <div className="HowToPlayDescriptionTitle">
                   MISSION BRIEFING
@@ -79,11 +79,11 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="HowToPlaySubSection">
+          <div className="HowToPlaySubSectionLine">
             <div className="HowToPlayLine" />
           </div>
           <div className="HowToPlaySubSection">
-            <div className="HowToPlayDescription">
+            <div className="HowToPlayDescriptionOnRight">
               <div className="HowToPlayDescriptionLeft">
                 <div className="HowToPlayDescriptionTitle"></div>
                 <div className="HowToPlayDescriptionText"></div>
@@ -98,11 +98,11 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="HowToPlaySubSection">
+          <div className="HowToPlaySubSectionLine">
             <div className="HowToPlayLine" />
           </div>
           <div className="HowToPlaySubSection">
-            <div className="HowToPlayDescription">
+            <div className="HowToPlayDescriptionOnLeft">
               <div className="HowToPlayDescriptionLeft">
                 <div className="HowToPlayDescriptionTitle">
                   SOLVE THE PUZZLE
@@ -119,11 +119,11 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="HowToPlaySubSection">
+          <div className="HowToPlaySubSectionLine">
             <div className="HowToPlayLine" />
           </div>
           <div className="HowToPlaySubSection">
-            <div className="HowToPlayDescription">
+            <div className="HowToPlayDescriptionOnRight">
               <div className="HowToPlayDescriptionLeft">
                 <div className="HowToPlayDescriptionTitle"></div>
                 <div className="HowToPlayDescriptionText"></div>

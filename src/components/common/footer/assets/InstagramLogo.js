@@ -14,6 +14,7 @@ const InstagramLogo = () => {
           viewBox="0 0 78 78"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          className="Logo"
         >
           <path
             fill-rule="evenodd"

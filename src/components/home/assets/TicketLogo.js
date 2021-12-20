@@ -10,6 +10,7 @@ const TicketLogo = () => {
         viewBox="0 0 261 261"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        className="removeAdditionalHeight"
       >
         <circle
           cx="130.582"

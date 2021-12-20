@@ -16,7 +16,8 @@ const Footer = () => {
         <div>GTD</div> <div className="Unsolved">UNSOLVED</div>
       </div>
       <div className="Copyright">
-        Copyright © 2022 GTD XXIV. All Rights Reserved.
+        <div>Copyright © 2022 GTD XXIV.</div>
+        <div>All Rights Reserved.</div>
       </div>
       <div className="Logos">
         <InstagramLogo />
