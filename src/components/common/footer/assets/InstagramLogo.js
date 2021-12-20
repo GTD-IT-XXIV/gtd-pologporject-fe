@@ -2,7 +2,7 @@ import React from "react";
 
 const InstagramLogo = () => {
   return (
-    <div>
+    <div className="InstagramLogo">
       <a
         href="https://www.instagram.com/pintugtd/"
         target="_blank"

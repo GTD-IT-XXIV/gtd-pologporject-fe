@@ -31,8 +31,13 @@ const Trailer = ({ duration, difficulty, capacity, videoId }) => {
           <div className="TrailerTitle">
             WATCH THE <span className="TrailerTitleRed">TRAILER</span>
           </div>
-          <div className="TrailerVideo">
-            <YouTube videoId={videoId} opts={opts} onReady={_onReady} />
+          <div className="TrailerVideoDiv">
+            <YouTube
+              videoId={videoId}
+              opts={opts}
+              onReady={_onReady}
+              className={"TrailerVideo"}
+            />
           </div>
         </div>
       </div>

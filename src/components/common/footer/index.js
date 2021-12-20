@@ -13,7 +13,7 @@ const Footer = () => {
           navigate("");
         }}
       >
-        GTD <span className="Unsolved">UNSOLVED</span>
+        <div>GTD</div> <div className="Unsolved">UNSOLVED</div>
       </div>
       <div className="Copyright">
         Copyright © 2022 GTD XXIV. All Rights Reserved.

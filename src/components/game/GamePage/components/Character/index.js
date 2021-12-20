@@ -31,7 +31,11 @@ const Character = ({ pages }) => {
                 {page.map((character, key) => {
                   return (
                     <div key={key} className="CharacterProfile">
-                      <img src={character.image}></img>
+                      <img
+                        src={character.image}
+                        alt="Character"
+                        className="CharacterPicture"
+                      ></img>
                       <div className="CharacterName">{character.name}</div>
                     </div>
                   );

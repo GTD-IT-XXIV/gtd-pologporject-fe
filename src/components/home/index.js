@@ -57,9 +57,10 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="HowToPlayLine" />
           </div>
-
+          <div className="HowToPlaySubSection">
+            <div className="HowToPlayLine"></div>
+          </div>
           <div className="HowToPlaySubSection">
             <div className="HowToPlayDescription">
               <div className="HowToPlayDescriptionLeft">
@@ -77,9 +78,10 @@ const Home = () => {
                 <div className="HowToPlayDescriptionText"></div>
               </div>
             </div>
+          </div>
+          <div className="HowToPlaySubSection">
             <div className="HowToPlayLine" />
           </div>
-
           <div className="HowToPlaySubSection">
             <div className="HowToPlayDescription">
               <div className="HowToPlayDescriptionLeft">
@@ -95,9 +97,10 @@ const Home = () => {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="HowToPlaySubSection">
             <div className="HowToPlayLine" />
           </div>
-
           <div className="HowToPlaySubSection">
             <div className="HowToPlayDescription">
               <div className="HowToPlayDescriptionLeft">
@@ -115,9 +118,10 @@ const Home = () => {
                 <div className="HowToPlayDescriptionText"></div>
               </div>
             </div>
+          </div>
+          <div className="HowToPlaySubSection">
             <div className="HowToPlayLine" />
           </div>
-
           <div className="HowToPlaySubSection">
             <div className="HowToPlayDescription">
               <div className="HowToPlayDescriptionLeft">

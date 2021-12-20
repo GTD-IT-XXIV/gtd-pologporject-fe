@@ -1,12 +1,13 @@
 import React from "react";
+import "./style.css";
 
 const TicketLogo = () => {
   return (
-    <div>
+    <div className="removeAdditionalHeight">
       <svg
         width="180"
-        height="186"
-        viewBox="0 0 261 262"
+        height="180"
+        viewBox="0 0 261 261"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >

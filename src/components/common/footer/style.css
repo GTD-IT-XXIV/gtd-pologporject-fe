@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   padding: 15vh 3vh 10vh 3vh;
 }
 
@@ -13,6 +14,7 @@
   color: white;
   font-size: 6vh;
   cursor: pointer;
+  justify-content: center;
 }
 
 .Unsolved {
@@ -35,4 +37,25 @@
 
 .FacebookLogo {
   margin-left: 3vh;
+}
+
+svg:hover path {
+  transition: 0.5s;
+  fill: red;
+}
+
+@media screen and (max-width: 768px) {
+  .GTD {
+    font-size: 3vh;
+  }
+  .Copyright {
+    margin: 0;
+    font-size: 2vh;
+  }
+  .Logos {
+    flex-direction: column;
+  }
+  .InstagramLogo {
+    margin-left: 3vh;
+  }
 }

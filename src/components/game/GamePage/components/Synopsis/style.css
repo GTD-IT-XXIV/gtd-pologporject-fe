@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 10vh;
+  justify-content: center;
 }
 
 .SynopsisTitle {
@@ -25,4 +25,17 @@
   font-weight: 500;
   font-size: 2.7vh;
   color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .SynopsisSection {
+    height: 80vh;
+  }
+  .SynopsisTitle {
+    font-size: 4vh;
+  }
+  .SynopsisText {
+    text-align: justify;
+    font-size: 2.05vh;
+  }
 }

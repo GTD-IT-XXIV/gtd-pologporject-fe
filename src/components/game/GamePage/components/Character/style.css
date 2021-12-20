@@ -79,3 +79,20 @@
 .LeftArrowWhite:hover {
   cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+  .CharacterSection {
+    height: 50vh;
+  }
+  .CharacterTitle {
+    font-size: 4vh;
+    margin-bottom: 8vh;
+  }
+  .CharacterPicture {
+    height: 55px;
+  }
+  svg {
+    width: 30px;
+    height: 30px;
+  }
+}

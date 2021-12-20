@@ -50,3 +50,25 @@
   flex-direction: column;
   align-items: center;
 }
+
+@media screen and (max-width: 968px) {
+  .GameDetailSection {
+    height: 110vh;
+  }
+  .DetailDescription {
+    font-size: 3vh;
+  }
+  .DetailDescription {
+    font-size: 2.5vh;
+  }
+  .TrailerTitle {
+    font-size: 4vh;
+  }
+  .TrailerVideoDiv {
+    margin-top: 5vh;
+  }
+  .TrailerVideo {
+    height: 100%;
+    width: 80vw;
+  }
+}

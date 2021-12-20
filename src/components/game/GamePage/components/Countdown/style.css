@@ -1,10 +1,12 @@
 .CountdownSection {
   width: 100%;
-  height: 103.8vh;
+  height: 104vh;
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   padding: 19vh;
 }
@@ -82,4 +84,30 @@
   letter-spacing: 0;
   font-family: "Poppins";
   text-shadow: 1px 0 #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .CountdownSection {
+    height: 100vh;
+    width: 100vw;
+    padding: 0vh;
+    background-size: cover;
+    background-position: initial;
+  }
+  .GameTitle {
+    font-size: 5vh;
+  }
+  .TimeValue {
+    font-size: 4vh;
+  }
+  .TimeBoxes {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2vh;
+  }
+  .TimeBox {
+    height: 12vh;
+    margin: 2vh;
+    padding-bottom: 1vh;
+  }
 }
