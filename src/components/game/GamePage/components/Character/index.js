@@ -27,7 +27,10 @@ const Character = ({ pages }) => {
           {pages.map((page, index) => {
             let isActive = parseInt(`${index}`) === activeIndex;
             return (
-              <div className={isActive ? "CharacterPage" : "HidePage"}>
+              <div
+                key={index}
+                className={isActive ? "CharacterPage" : "HidePage"}
+              >
                 {page.map((character, key) => {
                   return (
                     <div key={key} className="CharacterProfile">
