@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect } from "react";
 import Character from "./components/Character";
 
 import Countdown from "./components/Countdown";
@@ -13,13 +13,13 @@ const GamePage = (props) => {
   const RenderComponent = (prop) => {
     switch (prop) {
       case "CountdownProps":
-        return <Countdown {...props[`${prop}`]} />;
+        return <Countdown {...props[prop]} />;
       case "TrailerProps":
-        return <Trailer {...props[`${prop}`]} />;
+        return <Trailer {...props[prop]} />;
       case "SynopsisProps":
-        return <Synopsis {...props[`${prop}`]} />;
+        return <Synopsis {...props[prop]} />;
       case "CharacterProps":
-        return <Character {...props[`${prop}`]} />;
+        return <Character {...props[prop]} />;
     }
   };
 

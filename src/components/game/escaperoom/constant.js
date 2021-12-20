@@ -1,6 +1,4 @@
 import image from "./assets/image.png";
-import bear from "./assets/bear.png";
-import bear2 from "./assets/bear2.png";
 
 export const escapeRoomProps = {
   CountdownProps: {
