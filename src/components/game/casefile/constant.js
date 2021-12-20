@@ -9,6 +9,7 @@ export const casefileProps = {
     genre: "HORROR | ADVENTURE",
     CTAText: "BUY TICKET",
     image: image,
+    link: "casefile/register",
   },
   TrailerProps: {
     duration: "2 hours",

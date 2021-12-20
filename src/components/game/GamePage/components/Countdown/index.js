@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./style.css";
 
-const Countdown = ({ date, title, genre, CTAText, image }) => {
+const Countdown = ({ date, title, genre, CTAText, image, link }) => {
   const [timerDays, setTimerDays] = useState("00");
   const [timerHours, setTimerHours] = useState("00");
   const [timerMinutes, setTimerMinutes] = useState("00");
@@ -68,7 +68,9 @@ const Countdown = ({ date, title, genre, CTAText, image }) => {
           <div className="TimeUnit">seconds</div>
         </div>
       </div>
-      <a className="CTA-Buy">{CTAText}</a>
+      <a className="CTA-Buy" href={`${link}`}>
+        {CTAText}
+      </a>
     </div>
   );
 };

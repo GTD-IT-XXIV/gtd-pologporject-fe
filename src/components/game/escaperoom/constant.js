@@ -7,6 +7,7 @@ export const escapeRoomProps = {
     genre: "HORROR | ADVENTURE",
     CTAText: "BUY TICKET",
     image: image,
+    link: "/escaperoom/register",
   },
   TrailerProps: {
     duration: "2 hours",

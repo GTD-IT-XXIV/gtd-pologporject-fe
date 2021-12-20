@@ -9,6 +9,7 @@ export const heistProps = {
     genre: "HORROR | ADVENTURE",
     CTAText: "BUY TICKET",
     image: image,
+    link: "/heist/register",
   },
   TrailerProps: {
     duration: "2 hours",
