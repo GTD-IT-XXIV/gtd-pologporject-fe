@@ -2,7 +2,7 @@ import image from "./assets/image.png";
 
 export const escapeRoomProps = {
   CountdownProps: {
-    date: "January 7, 2022 00:00:00",
+    date: "January 15, 2022 00:00:00",
     title: "escape room",
     genre: "HORROR | ADVENTURE",
     CTAText: "BUY TICKET",

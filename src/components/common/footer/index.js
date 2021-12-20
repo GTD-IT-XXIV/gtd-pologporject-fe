@@ -18,7 +18,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="Copyright">
-        <div>Copyright © 2022 GTD XXIV.</div>
+        <div>Copyright © 2022 GTD XXIV</div>
         <div>All Rights Reserved.</div>
       </div>
       <div className="Logos">

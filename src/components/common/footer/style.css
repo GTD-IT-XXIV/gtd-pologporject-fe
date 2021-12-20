@@ -40,7 +40,7 @@
   flex-direction: row;
   width: 33%;
   height: 50%;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
 }
 .FacebookLogo {
@@ -48,7 +48,7 @@
 }
 
 .Logo:hover path {
-  transition: 0.5s;
+  transition: 0.7s;
   fill: red;
 }
 
@@ -69,7 +69,7 @@
   }
   .Logos {
     flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
     justify-content: center;
   }
   .Logo {

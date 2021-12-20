@@ -4,8 +4,8 @@ import bear2 from "./assets/bear2.png";
 
 export const casefileProps = {
   CountdownProps: {
-    date: "January 7, 2022 00:00:00",
-    title: "escape room",
+    date: "January 15, 2022 00:00:00",
+    title: "case file",
     genre: "HORROR | ADVENTURE",
     CTAText: "BUY TICKET",
     image: image,
