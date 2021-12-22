@@ -1,7 +1,7 @@
 .CountdownSection {
   width: 100%;
-  height: 104vh;
-  background-size: contain;
+  height: 100vh;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
@@ -92,7 +92,7 @@
     width: 100vw;
     padding: 0vh;
     background-size: cover;
-    background-position: initial;
+    background-position: center;
   }
   .GameTitle {
     font-size: 5vh;

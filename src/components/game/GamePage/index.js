@@ -20,6 +20,8 @@ const GamePage = (props) => {
         return <Synopsis {...props[prop]} />;
       case "CharacterProps":
         return <Character {...props[prop]} />;
+      default:
+        return <div>Nothing</div>;
     }
   };
 

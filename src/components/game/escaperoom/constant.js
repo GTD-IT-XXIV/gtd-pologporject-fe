@@ -1,4 +1,4 @@
-import image from "./assets/image.png";
+import image from "./assets/image.gif";
 
 export const escapeRoomProps = {
   CountdownProps: {

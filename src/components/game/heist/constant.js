@@ -1,4 +1,4 @@
-import image from "./assets/image.png";
+import image from "./assets/image.gif";
 import bear from "./assets/bear.png";
 import bear2 from "./assets/bear2.png";
 
@@ -6,7 +6,7 @@ export const heistProps = {
   CountdownProps: {
     date: "January 29, 2022 00:00:00",
     title: "heist",
-    genre: "HORROR | ADVENTURE",
+    genre: "ACTION | ADVENTURE",
     CTAText: "BUY TICKET",
     image: image,
     link: "/heist/register",
