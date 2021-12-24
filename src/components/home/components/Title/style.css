@@ -1,0 +1,81 @@
+.TitleSection {
+  width: 100%;
+  height: 90vh;
+  background-color: black;
+}
+
+.TitleSubSection {
+  background: url("../../assets/background.gif");
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 2vh;
+}
+
+.Title {
+  margin-top: 14vh;
+  margin-left: 1vh;
+}
+
+.TitleReady {
+  text-align: center;
+  line-height: 0.5;
+  font-weight: 400;
+  font-size: 10vh;
+  font-family: Men of Nihilist;
+  color: white;
+}
+
+.TitleSolve {
+  text-align: center;
+  line-height: 1.5;
+  font-size: 3.8vh;
+  font-family: Men of Nihilist;
+  color: white;
+}
+
+.TitleUnsolved {
+  line-height: 1.2;
+  text-align: center;
+  font-size: 7vh;
+  font-family: Men of Nihilist;
+  color: white;
+  text-shadow: 0px 0px white;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.TitleUnsolved:hover {
+  color: #cc0000;
+  text-shadow: -1px 0px white;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.DownArrow {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .TitleSubSection {
+    background-position: center;
+    background-size: cover;
+  }
+  .Title {
+    margin-top: 8vh;
+  }
+  .DownArrow {
+    height: 64px;
+    width: 64px;
+  }
+}

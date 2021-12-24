@@ -1,0 +1,79 @@
+.Footer {
+  width: 100%;
+  height: 15vh;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3vh;
+}
+
+.GTD {
+  font-family: "Men of Nihilist", sans-serif;
+  color: white;
+  font-size: 300%;
+  cursor: pointer;
+  width: 33%;
+  height: 50%;
+}
+
+.Unsolved {
+  color: #cc0000;
+}
+
+.Copyright {
+  height: 50%;
+  font-size: 2.2vh;
+  text-align: center;
+  width: 33%;
+  color: white;
+  font-family: "Poppins", "sans-serif";
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.Logos {
+  display: flex;
+  flex-direction: row;
+  width: 33%;
+  height: 50%;
+  justify-content: flex-end;
+  align-items: center;
+}
+.FacebookLogo {
+  margin-left: 2vw;
+}
+
+.Logo:hover path {
+  transition: 0.7s;
+  fill: red;
+}
+
+@media screen and (max-width: 768px) {
+  .Footer {
+    height: 15vh;
+  }
+  .GTD {
+    font-size: 2.5vh;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+  }
+  .Copyright {
+    margin: 0;
+    font-size: 1.5vh;
+    justify-content: center;
+  }
+  .Logos {
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .Logo {
+    width: 48px;
+    height: 48px;
+  }
+}
