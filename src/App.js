@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/common/navbar";
 import Scripts from "./scripts";
 import Footer from "./components/common/footer";
+import Header from "./components/common/header"
 
 function App() {
   document.body.style = "background: black;";
@@ -10,6 +11,7 @@ function App() {
     <>
       <Scripts></Scripts>
       <Router>
+        <Header/>
         <NavBar
           children={
             <Routes>
