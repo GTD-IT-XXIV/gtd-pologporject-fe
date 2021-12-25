@@ -66,7 +66,14 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <div className="promo-title">PROMO</div>
+        <div
+          className="promo-title"
+          onClick={() => {
+            navigate("promo");
+          }}
+        >
+          PROMO
+        </div>
       </div>
     </div>
   );

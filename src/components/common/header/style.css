@@ -1,120 +1,125 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;800&display=swap');
-.all{
-    background-image:linear-gradient(#4D0000,#000000);
-    height: 12.5vh;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;800&display=swap");
+.all {
+  position: sticky;
+  background-image: linear-gradient(#4d0000, #000000);
+  height: 12.5vh;
+  width: 100vw;
 }
-.headers{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    color:white;
-    width:200vh;
-    padding-top: 5vh;
-    padding-left:20vw;
-    padding-right:20vw;
-    
+.headers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  color: white;
+  width: 100%;
+  height: 100%;
+  padding-top: 4.5vh;
 }
-.home-title{
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 800;
-    letter-spacing: 0em;
-    text-align: center;
-    font-size:2.5vh;
-    cursor:pointer;
+.home-title {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0em;
+  text-align: center;
+  font-size: 2.5vh;
+  cursor: pointer;
 }
-.home-title:hover{
-    color:red;
+.home-title:hover {
+  color: red;
+  transition: 0.5s;
 }
-.buy-tickets-title{
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 800;
-    letter-spacing: 0em;
-    text-align: center;
-    font-size:2.5vh;
-    cursor: pointer;
+.buy-tickets-title {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0em;
+  text-align: center;
+  font-size: 2.5vh;
+  cursor: pointer;
 }
-.buy-tickets-title:hover{
-    color:red;
+.buy-tickets-title:hover {
+  color: red;
+  transition: 0.5s;
 }
-.promo-title{
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 800;
-    letter-spacing: 0em;
-    text-align: center;
-    font-size:2.5vh;
-    cursor: pointer;
+.promo-title {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0em;
+  text-align: center;
+  font-size: 2.5vh;
+  cursor: pointer;
 }
-.promo-title:hover{
-    color:red;
+.promo-title:hover {
+  color: red;
+  transition: 0.5s;
 }
-.now-playing-title{
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 800;
-    letter-spacing: 0em;
-    text-align: center;
-    font-size:2.5vh;
-    cursor: pointer;
+.now-playing-title {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0em;
+  text-align: center;
+  font-size: 2.5vh;
+  cursor: pointer;
 }
-.now-playing-title:hover{
-    color:red;
+.now-playing-title:hover {
+  color: red;
+  transition: 0.5s;
 }
-.gtd-unsolved-title{
-    font-family:"Men of Nihilist",sans-serif;
-    align-content: center;
-    font-size:4.5vh;
-    cursor: pointer;
+.gtd-unsolved-title {
+  font-family: "Men of Nihilist", sans-serif;
+  align-content: center;
+  font-size: 4.5vh;
+  cursor: pointer;
 }
-.gtd-unsolved-title:hover span{
-    color:red;
+.gtd-unsolved-title:hover span {
+  color: red;
+  transition: 0.5s;
 }
-.dropdown{
-    display:none;
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 700;
-    letter-spacing: 0em;
-    text-align: center;
+.dropdown {
+  display: none;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.now-playing:hover .dropdown {
+  display: block;
+  cursor: pointer;
+}
+.dropdown div:hover {
+  background-color: #380000;
+}
 
+.dropdown div {
+  background-color: black;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  align-items: center;
+  text-align: center;
+  padding: 2vh;
 }
-.now-playing:hover .dropdown{
-    display:block;
-    cursor:pointer;
+.buy-tickets-dropdown {
+  display: none;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0em;
+  text-align: center;
 }
-.dropdown div:hover{
-    background-color: #380000;
+.buy-tickets-dropdown div {
+  background-color: black;
+  padding: 2vh;
+  align-items: center;
+  text-align: center;
 }
-
-.dropdown div{
-    background-color: black;
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: bold;
-    align-items: center;
-    text-align: center;
-    padding:2vh;
-}
-.buy-tickets-dropdown{
-    display:none;
-    font-family:Poppins;
-    font-style: normal;
-    font-weight: 700;
-    letter-spacing: 0em;
-    text-align: center;
-}
-.buy-tickets-dropdown div{
-    background-color: black;
-    padding:2vh;
-    align-items: center;
-    text-align: center;
-}
-.buy-tickets:hover .buy-tickets-dropdown{
-    display:block;
-    cursor:pointer;
+.buy-tickets:hover .buy-tickets-dropdown {
+  display: block;
+  cursor: pointer;
+  transition: 0.5s;
 }
 .buy-tickets-dropdown div:hover {
-    background-color: #380000;
+  background-color: #380000;
 }
