@@ -38,7 +38,9 @@ const Header = () => {
             navigate("");
           }}
         >
-          GTD <span>UNSOLVED</span>
+          <div>
+            GTD <span>UNSOLVED</span>
+          </div>
         </div>
         <div className="buy-tickets">
           <div className="buy-tickets-title">BUY TICKETS</div>

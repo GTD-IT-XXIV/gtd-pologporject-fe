@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;800&display=swap");
 .all {
-  position: sticky;
+  position: fixed;
   background-image: linear-gradient(#4d0000, #000000);
   height: 12.5vh;
   width: 100vw;
+  z-index: 1;
 }
 .headers {
   display: flex;
@@ -13,6 +14,7 @@
   width: 100%;
   height: 100%;
   padding-top: 4.5vh;
+  padding-bottom: 4.5vh;
 }
 .home-title {
   font-family: Poppins;
@@ -20,7 +22,7 @@
   font-weight: 800;
   letter-spacing: 0em;
   text-align: center;
-  font-size: 2.5vh;
+  font-size: 1.75vw;
   cursor: pointer;
 }
 .home-title:hover {
@@ -33,7 +35,7 @@
   font-weight: 800;
   letter-spacing: 0em;
   text-align: center;
-  font-size: 2.5vh;
+  font-size: 1.75vw;
   cursor: pointer;
 }
 .buy-tickets-title:hover {
@@ -46,7 +48,7 @@
   font-weight: 800;
   letter-spacing: 0em;
   text-align: center;
-  font-size: 2.5vh;
+  font-size: 1.75vw;
   cursor: pointer;
 }
 .promo-title:hover {
@@ -59,7 +61,7 @@
   font-weight: 800;
   letter-spacing: 0em;
   text-align: center;
-  font-size: 2.5vh;
+  font-size: 1.75vw;
   cursor: pointer;
 }
 .now-playing-title:hover {
@@ -68,8 +70,7 @@
 }
 .gtd-unsolved-title {
   font-family: "Men of Nihilist", sans-serif;
-  align-content: center;
-  font-size: 4.5vh;
+  font-size: 3.25vw;
   cursor: pointer;
 }
 .gtd-unsolved-title:hover span {
@@ -81,6 +82,7 @@
   font-family: Poppins;
   font-style: normal;
   font-weight: 700;
+  font-size: 1.4vw;
   letter-spacing: 0em;
   text-align: center;
 }
@@ -106,6 +108,7 @@
   font-family: Poppins;
   font-style: normal;
   font-weight: 700;
+  font-size: 1.4vw;
   letter-spacing: 0em;
   text-align: center;
 }
@@ -122,4 +125,14 @@
 }
 .buy-tickets-dropdown div:hover {
   background-color: #380000;
+}
+
+@media screen and (max-width: 768px) {
+  .all {
+    height: 6.5vh;
+  }
+  .headers {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+  }
 }

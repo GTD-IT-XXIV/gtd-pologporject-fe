@@ -95,6 +95,7 @@
   border: 1px solid #ffffff;
   width: 0;
   height: 13vh;
+  z-index: 0;
 }
 
 @media screen and (max-width: 768px) {
