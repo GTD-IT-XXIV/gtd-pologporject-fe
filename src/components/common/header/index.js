@@ -11,21 +11,23 @@ const Header = () => {
             navigate("");
           }}
         >
-          HOME
+          <p className="text">HOME</p>
         </div>
         <div className="now-playing">
-          <div className="now-playing-title">NOW PLAYING</div>
+          <div className="now-playing-title">
+            <p className="text">NOW PLAYING</p>
+          </div>
           <div className="dropdown">
             <div
               onClick={() => {
-                navigate("casefile");
+                navigate("escaperoom");
               }}
             >
               ESCAPE ROOM
             </div>
             <div
               onClick={() => {
-                navigate("escaperoom");
+                navigate("casefile");
               }}
             >
               CASE FILE
@@ -43,7 +45,9 @@ const Header = () => {
           </div>
         </div>
         <div className="buy-tickets">
-          <div className="buy-tickets-title">BUY TICKETS</div>
+          <div className="buy-tickets-title">
+            <p className="text">BUY TICKETS</p>
+          </div>
           <div className="buy-tickets-dropdown">
             <div
               onClick={() => {
@@ -74,7 +78,7 @@ const Header = () => {
             navigate("promo");
           }}
         >
-          PROMO
+          <p className="text">PROMO</p>
         </div>
       </div>
     </div>

@@ -1,4 +1,7 @@
 import image from "./assets/image.gif";
+import orang1 from "./assets/orang1.jpeg";
+import orang2 from "./assets/orang2.jpeg";
+import orang3 from "./assets/orang3.jpeg";
 import bear from "./assets/bear.png";
 import bear2 from "./assets/bear2.png";
 
@@ -24,19 +27,9 @@ export const casefileProps = {
   CharacterProps: {
     pages: [
       [
-        { image: bear, name: "PANDA" },
-        { image: bear, name: "PANDA" },
-        { image: bear, name: "PANDA" },
-      ],
-      [
-        { image: bear2, name: "PANDe" },
-        { image: bear2, name: "PANDe" },
-        { image: bear2, name: "PANDe" },
-      ],
-      [
-        { image: bear, name: "PANDO" },
-        { image: bear, name: "PANDO" },
-        { image: bear, name: "PANDO" },
+        { image: orang3, name: "Huang Yixiang" },
+        { image: orang1, name: "Siti" },
+        { image: orang2, name: "Huang Yongfei" },
       ],
     ],
   },

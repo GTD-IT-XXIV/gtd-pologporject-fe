@@ -45,6 +45,10 @@
   transition: visibility 0s linear 0s, opacity 500ms;
 }
 
+.CharacterPicture {
+  height: 250px;
+}
+
 .HidePage {
   position: absolute;
   padding: 0;
@@ -89,7 +93,10 @@
     margin-bottom: 8vh;
   }
   .CharacterPicture {
-    height: 55px;
+    height: 60px;
+  }
+  .CharacterName {
+    font-size: x-small;
   }
   .Arrow {
     height: 40px;

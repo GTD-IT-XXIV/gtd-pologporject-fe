@@ -6,6 +6,13 @@
   width: 100vw;
   z-index: 1;
 }
+.text {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 1.75vw;
+  letter-spacing: 0em;
+}
 .headers {
   display: flex;
   flex-direction: row;
@@ -17,12 +24,7 @@
   padding-bottom: 4.5vh;
 }
 .home-title {
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 800;
-  letter-spacing: 0em;
   text-align: center;
-  font-size: 1.75vw;
   cursor: pointer;
 }
 .home-title:hover {
@@ -30,12 +32,7 @@
   transition: 0.5s;
 }
 .buy-tickets-title {
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 800;
-  letter-spacing: 0em;
   text-align: center;
-  font-size: 1.75vw;
   cursor: pointer;
 }
 .buy-tickets-title:hover {
@@ -43,12 +40,7 @@
   transition: 0.5s;
 }
 .promo-title {
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 800;
-  letter-spacing: 0em;
   text-align: center;
-  font-size: 1.75vw;
   cursor: pointer;
 }
 .promo-title:hover {
@@ -56,12 +48,7 @@
   transition: 0.5s;
 }
 .now-playing-title {
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 800;
-  letter-spacing: 0em;
   text-align: center;
-  font-size: 1.75vw;
   cursor: pointer;
 }
 .now-playing-title:hover {
@@ -134,5 +121,8 @@
   .headers {
     padding-top: 2vh;
     padding-bottom: 2vh;
+  }
+  .text {
+    font-size: 2vw;
   }
 }
