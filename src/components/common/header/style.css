@@ -12,6 +12,7 @@
   font-weight: 800;
   font-size: 1.75vw;
   letter-spacing: 0em;
+  margin: 0;
 }
 .headers {
   display: flex;
