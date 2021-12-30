@@ -46,7 +46,7 @@
 }
 
 .CharacterPicture {
-  height: 250px;
+  height: 200px;
 }
 
 .HidePage {
@@ -90,10 +90,10 @@
   }
   .CharacterTitle {
     font-size: 4vh;
-    margin-bottom: 8vh;
+    margin-bottom: 5vh;
   }
   .CharacterPicture {
-    height: 60px;
+    height: 70px;
   }
   .CharacterName {
     font-size: x-small;

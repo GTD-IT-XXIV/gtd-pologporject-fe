@@ -51,10 +51,6 @@ const Home = () => {
                 <div className="HowToPlayDescriptionTitle">
                   BOOK YOUR TICKET
                 </div>
-                <div className="HowToPlayDescriptionText">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </div>
               </div>
             </div>
           </div>
@@ -66,10 +62,6 @@ const Home = () => {
               <div className="HowToPlayDescriptionLeft">
                 <div className="HowToPlayDescriptionTitle">
                   MISSION BRIEFING
-                </div>
-                <div className="HowToPlayDescriptionText">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </div>
               </div>
               <PeopleLogo />
@@ -91,10 +83,6 @@ const Home = () => {
               <MagnifyLogo />
               <div className="HowToPlayDescriptionRight">
                 <div className="HowToPlayDescriptionTitle">FIND THE CLUES</div>
-                <div className="HowToPlayDescriptionText">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </div>
               </div>
             </div>
           </div>
@@ -106,10 +94,6 @@ const Home = () => {
               <div className="HowToPlayDescriptionLeft">
                 <div className="HowToPlayDescriptionTitle">
                   SOLVE THE PUZZLE
-                </div>
-                <div className="HowToPlayDescriptionText">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </div>
               </div>
               <PuzzlePieceWhite />
@@ -131,10 +115,6 @@ const Home = () => {
               <EscapeLogo />
               <div className="HowToPlayDescriptionRight">
                 <div className="HowToPlayDescriptionTitle">ESCAPE!</div>
-                <div className="HowToPlayDescriptionText">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </div>
               </div>
             </div>
           </div>

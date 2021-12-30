@@ -72,12 +72,13 @@
     height: 175vh;
     flex-direction: column;
     padding: 3vh 10vw;
+    align-items: center;
   }
   .GamesDisplay {
-    width: 100%;
+    width: 80%;
     padding: 1.2vh;
     margin-top: 2vh;
-    margin-bottom: 2vh;
+    margin-bottom: 1.5vh;
   }
   .GamesDate {
     font-size: 3vh;

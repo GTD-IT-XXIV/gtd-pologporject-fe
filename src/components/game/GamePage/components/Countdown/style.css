@@ -104,6 +104,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: 2vh;
+    width: 100vw;
   }
   .TimeBox {
     height: 12vh;

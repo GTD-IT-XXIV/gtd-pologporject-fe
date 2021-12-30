@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 import Poster from "../../assets/Poster.png";
 import Poster2 from "../../assets/Poster1.png";
-import Poster3 from "../../assets/Poster2.png";
+import Poster3 from "../../assets/heist.jpg";
 import DollarSign from "../../assets/DollarSign";
 import PuzzlePiece from "../../assets/PuzzlePiece";
 import Suitcase from "../../assets/Suitcase";
