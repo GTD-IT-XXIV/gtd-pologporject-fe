@@ -1,4 +1,7 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
 export default function Scripts() {
+  AOS.init();
   return (
     <>
       <link rel="preconnect" href="https://fonts.googleapis.com"></link>
@@ -29,6 +32,11 @@ export default function Scripts() {
         href="http://fonts.cdnfonts.com/css/men-of-nihilist"
         rel="stylesheet"
       ></link>
+      <link
+        href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+        rel="stylesheet"
+      ></link>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     </>
   );
 }

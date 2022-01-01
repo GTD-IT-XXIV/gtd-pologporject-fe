@@ -1,0 +1,23 @@
+.ComingSoon {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.ComingSoonTitle {
+  font-family: "Men of Nihilist", sans-serif;
+  color: rgb(163, 68, 68);
+  font-size: 6vw;
+}
+
+.ComingSoonText {
+  font-family: "Men of Nihilist", sans-serif;
+  color: white;
+  font-size: 4vw;
+}

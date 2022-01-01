@@ -6,6 +6,7 @@ import Promo from "./components/promo";
 import CFGame from "./components/game/casefile";
 import HGame from "./components/game/heist";
 import ERGame from "./components/game/escaperoom";
+import ComingSoon from "./components/common/comingsoon";
 
 export const routes = [
   {
@@ -55,5 +56,11 @@ export const routes = [
     name: "Escape Room Game",
     component: <ERGame />,
     path: "/escaperoom",
+  },
+  {
+    id: 9,
+    name: "Coming Soon",
+    component: <ComingSoon></ComingSoon>,
+    path: "/comingsoon",
   },
 ];

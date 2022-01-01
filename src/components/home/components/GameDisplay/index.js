@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 import Poster from "../../assets/Poster.png";
-import Poster2 from "../../assets/Poster1.png";
+import Poster2 from "../../assets/casefile.jpg";
 import Poster3 from "../../assets/heist.jpg";
 import DollarSign from "../../assets/DollarSign";
 import PuzzlePiece from "../../assets/PuzzlePiece";
@@ -11,7 +11,12 @@ const GameDisplay = ({ divRef }) => {
   const navigate = useNavigate();
 
   return (
-    <div className="GamesDisplaySection" ref={divRef}>
+    <div
+      className="GamesDisplaySection"
+      ref={divRef}
+      data-aos="fade-up"
+      data-aos-duration="2000"
+    >
       <div
         className="GamesDisplay"
         onClick={() => {

@@ -12,7 +12,7 @@ const Trailer = ({ duration, difficulty, capacity, videoId }) => {
   };
   return (
     <div>
-      <div className="GameDetailSection">
+      <div className="GameDetailSection" data-aos="fade-up">
         <div className="Details">
           <div className="DetailTitle">Duration</div>
           <div className="DetailDescription">{duration}</div>
@@ -32,11 +32,19 @@ const Trailer = ({ duration, difficulty, capacity, videoId }) => {
             WATCH THE <span className="TrailerTitleRed">TRAILER</span>
           </div>
           <div className="TrailerVideoDiv">
-            <YouTube
+            {/* <YouTube
               videoId={videoId}
               opts={opts}
               onReady={_onReady}
               className={"TrailerVideo"}
+            /> */}
+            <iframe
+              className="TrailerVideo"
+              src={`https://www.youtube.com/embed/${videoId}`}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              title="Embedded youtube"
             />
           </div>
         </div>

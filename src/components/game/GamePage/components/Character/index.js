@@ -14,7 +14,7 @@ const Character = ({ pages }) => {
         <div className="CharacterTitle">
           THE <span className="CharacterTitleRed">CHARACTER</span>
         </div>
-        <div className="Carousel">
+        <div className="Carousel" data-aos="zoom-in">
           {activeIndex !== 0 ? (
             <LeftArrowWhite
               onClick={() => {

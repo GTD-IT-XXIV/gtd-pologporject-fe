@@ -14,7 +14,7 @@ export const heistProps = {
   TrailerProps: {
     duration: "2 hours",
     difficulty: "•••••",
-    capacity: "5-7 person(s)",
+    capacity: "5 person(s)",
     videoId: "MzznUfFGcOg",
   },
   SynopsisProps: {

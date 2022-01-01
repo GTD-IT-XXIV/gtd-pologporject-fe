@@ -46,6 +46,7 @@ const Countdown = ({ date, title, genre, CTAText, image, link }) => {
       style={{
         backgroundImage: `url(${image})`,
       }}
+      data-aos="zoom-in"
     >
       <div className="GameTitle">{title}</div>
       <div className="GameGenre">{genre}</div>

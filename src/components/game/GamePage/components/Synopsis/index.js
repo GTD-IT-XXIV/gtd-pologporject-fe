@@ -6,7 +6,9 @@ const Synopsis = ({ synopsis }) => {
       <div className="SynopsisTitle">
         THE <span className="SynopsisTitleRed">SYNOPSIS</span>
       </div>
-      <div className="SynopsisText">{synopsis}</div>
+      <div className="SynopsisText" data-aos="zoom-in">
+        {synopsis}
+      </div>
     </div>
   );
 };

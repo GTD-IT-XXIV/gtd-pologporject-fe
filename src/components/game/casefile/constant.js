@@ -8,21 +8,21 @@ import bear2 from "./assets/bear2.png";
 export const casefileProps = {
   CountdownProps: {
     date: "January 15, 2022 00:00:00",
-    title: "case file",
-    genre: "MYSTERY | ADVENTURE",
+    title: "misfortune",
+    genre: "MYSTERY",
     CTAText: "BUY TICKET",
     image: image,
     link: "casefile/register",
   },
   TrailerProps: {
     duration: "2 hours",
-    difficulty: "•••••",
-    capacity: "5-7 person(s)",
+    difficulty: "••••",
+    capacity: "5 person(s)",
     videoId: "MzznUfFGcOg",
   },
   SynopsisProps: {
     synopsis:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "On one night, the children of a retired business owner of a multimillion dollar company came to visit their parents at home for a family dinner. It was a very warm and comforting night, until the police received a call at midnight. There mourns a family, upon an unfortunate passing of the retired business owner, a father of two, a beloved husband, and a great leader. The burden is bestowed on, YOU,  the newly recruited police officers, will you be able to find the clues to trace the murderer amongst the suspects, and bring closure to the family that was left behind?",
   },
   CharacterProps: {
     pages: [

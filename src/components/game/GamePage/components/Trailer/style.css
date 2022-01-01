@@ -45,6 +45,17 @@
   color: #cc0000;
 }
 
+.TrailerVideoDiv {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+.TrailerVideo {
+  width: 60vw;
+  height: 40vw;
+}
+
 .TrailerSection {
   display: flex;
   flex-direction: column;
@@ -53,7 +64,7 @@
 
 @media screen and (max-width: 968px) {
   .GameDetailSection {
-    height: 110vh;
+    height: 100vh;
   }
   .DetailDescription {
     font-size: 3vh;
@@ -66,9 +77,5 @@
   }
   .TrailerVideoDiv {
     margin-top: 5vh;
-  }
-  .TrailerVideo {
-    height: 100%;
-    width: 80vw;
   }
 }

@@ -27,7 +27,11 @@ const Home = () => {
         <div className="DetailsTitle">
           GTD <span className="DetailsTitleRed">UNSOLVED</span>
         </div>
-        <div className="DetailsDescription">
+        <div
+          className="DetailsDescription"
+          data-aos="zoom-in"
+          data-aos-duration="500"
+        >
           GTD Unsolved is a series of escape room-esque games where you are
           tasked to solve cases and figure out their underlying enigmatic
           stories along the way. Expect brain-teasing puzzles and tantalizing
@@ -48,7 +52,7 @@ const Home = () => {
               </div>
               <TicketLogo />
               <div className="HowToPlayDescriptionRight">
-                <div className="HowToPlayDescriptionTitle">
+                <div className="HowToPlayDescriptionTitle" data-aos="fade-left">
                   BOOK YOUR TICKET
                 </div>
               </div>
@@ -60,7 +64,10 @@ const Home = () => {
           <div className="HowToPlaySubSection">
             <div className="HowToPlayDescriptionOnLeft">
               <div className="HowToPlayDescriptionLeft">
-                <div className="HowToPlayDescriptionTitle">
+                <div
+                  className="HowToPlayDescriptionTitle"
+                  data-aos="fade-right"
+                >
                   MISSION BRIEFING
                 </div>
               </div>
@@ -82,7 +89,9 @@ const Home = () => {
               </div>
               <MagnifyLogo />
               <div className="HowToPlayDescriptionRight">
-                <div className="HowToPlayDescriptionTitle">FIND THE CLUES</div>
+                <div className="HowToPlayDescriptionTitle" data-aos="fade-left">
+                  FIND THE CLUES
+                </div>
               </div>
             </div>
           </div>
@@ -92,7 +101,10 @@ const Home = () => {
           <div className="HowToPlaySubSection">
             <div className="HowToPlayDescriptionOnLeft">
               <div className="HowToPlayDescriptionLeft">
-                <div className="HowToPlayDescriptionTitle">
+                <div
+                  className="HowToPlayDescriptionTitle"
+                  data-aos="fade-right"
+                >
                   SOLVE THE PUZZLE
                 </div>
               </div>
@@ -114,7 +126,9 @@ const Home = () => {
               </div>
               <EscapeLogo />
               <div className="HowToPlayDescriptionRight">
-                <div className="HowToPlayDescriptionTitle">ESCAPE!</div>
+                <div className="HowToPlayDescriptionTitle" data-aos="fade-left">
+                  ESCAPE!
+                </div>
               </div>
             </div>
           </div>

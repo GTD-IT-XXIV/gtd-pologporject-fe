@@ -4,7 +4,7 @@ import "./style.css";
 
 const Title = ({ onClick }) => {
   return (
-    <div className="TitleSection">
+    <div className="TitleSection" data-aos="zoom-in" data-aos-duration="1000">
       <div className="TitleSubSection">
         <div className="Title">
           <div className="TitleReady">READY</div>
