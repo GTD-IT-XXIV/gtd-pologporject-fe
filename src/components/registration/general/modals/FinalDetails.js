@@ -83,7 +83,7 @@ const FinalDetails = (props) => {
             {
               onClose: async () => {
                 await axios.put(
-                  "https://desolate-cliifs-96244.herokuapp.com/book/offPayment",
+                  "https://desolate-cliffs-96244.herokuapp.com/book/offPayment",
                   {
                     game: game,
                     time: time,
