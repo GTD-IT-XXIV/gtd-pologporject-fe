@@ -71,7 +71,7 @@ const Header = () => {
             navigate("/heist");
           }}
         >
-          <p className="text">COMING SOON</p>
+          <p className="text">PREVIEW</p>
         </div>
       </div>
     </div>

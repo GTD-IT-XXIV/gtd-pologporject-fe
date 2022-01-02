@@ -3,16 +3,27 @@ import Exclamation from "../assets/Exclamation";
 import "./Error.css";
 
 export default function Error(props) {
-  const { show, setShow, isValidatePhone, isValidateEmail } = props;
+  const {
+    show,
+    setShow,
+    isValidatePhone,
+    isValidateEmail,
+    isAvailable,
+    availableSlots,
+    onPayment,
+  } = props;
   const theError = isValidatePhone
     ? isValidateEmail
-      ? "fill"
+      ? isAvailable
+        ? "fill"
+        : "full"
       : "email"
     : "mobile";
   const error = {
     mobile: "Enter the correct phone number",
     email: "Enter the correct email address",
     fill: "Please fill in the details",
+    full: `Capacity left is ${availableSlots} + ${onPayment} on going payments`,
   };
   return (
     <Modal show={show} centered>

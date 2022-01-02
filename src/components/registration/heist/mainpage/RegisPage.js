@@ -26,7 +26,7 @@ const RegisPage = (props) => {
       >
         <div className="pic-text">
           <div className="monte">heist</div>
-          <div className="horror">MYSTERY</div>
+          <div className="horror">HORROR</div>
         </div>
       </div>
       <div className="info" data-aos="fade-up">
@@ -52,17 +52,31 @@ const RegisPage = (props) => {
         </div>
         <div className="buttons">
           {data.map((slots) => {
-            return (
-              <div className="button" onClick={() => handleClick(slots)}>
-                <div className="books">
-                  <div className="booksText">{slots.timeSlot}</div>
+            if (slots.availableSlots === 0) {
+              return (
+                <div className="disabledbutton">
+                  <div className="books">
+                    <div className="booksText">{slots.timeSlot}</div>
+                  </div>
+                  <div className="disabledslots">
+                    <div className="slotsNumber">{slots.availableSlots}</div>
+                    <div className="slotsLeft">SLOTS LEFT</div>
+                  </div>
                 </div>
-                <div className="slots">
-                  <div className="slotsNumber">{slots.availableSlots}</div>
-                  <div className="slotsLeft">SLOTS LEFT</div>
+              );
+            } else {
+              return (
+                <div className="button" onClick={() => handleClick(slots)}>
+                  <div className="books">
+                    <div className="booksText">{slots.timeSlot}</div>
+                  </div>
+                  <div className="slots">
+                    <div className="slotsNumber">{slots.availableSlots}</div>
+                    <div className="slotsLeft">SLOTS LEFT</div>
+                  </div>
                 </div>
-              </div>
-            );
+              );
+            }
           })}
         </div>
       </div>
@@ -86,7 +100,7 @@ const RegisPage = (props) => {
               style={{ backgroundImage: `url(${Poster})` }}
             >
               <div className="GamesImageOverlay">
-                <Suitcase />
+                <PuzzlePiece />
                 <div className="GamesButton">PLAY</div>
               </div>
             </div>
@@ -104,7 +118,7 @@ const RegisPage = (props) => {
               style={{ backgroundImage: `url(${Poster2})` }}
             >
               <div className="GamesImageOverlay">
-                <PuzzlePiece />
+                <Suitcase />
                 <div className="GamesButton">PLAY</div>
               </div>
             </div>

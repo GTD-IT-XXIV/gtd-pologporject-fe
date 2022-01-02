@@ -147,10 +147,10 @@
 
 @media screen and (max-width: 768px) {
   .form_control {
-    width: 20vh;
+    width: 27vh;
   }
   .final_form_control {
-    width: 20vh;
+    width: 27vh;
   }
   .back_button {
     width: 100%;

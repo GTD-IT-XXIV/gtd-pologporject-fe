@@ -52,17 +52,31 @@ const RegisPage = (props) => {
         </div>
         <div className="buttons">
           {data.map((slots) => {
-            return (
-              <div className="button" onClick={() => handleClick(slots)}>
-                <div className="books">
-                  <div className="booksText">{slots.timeSlot}</div>
+            if (slots.availableSlots === 0) {
+              return (
+                <div className="disabledbutton">
+                  <div className="books">
+                    <div className="booksText">{slots.timeSlot}</div>
+                  </div>
+                  <div className="disabledslots">
+                    <div className="slotsNumber">{slots.availableSlots}</div>
+                    <div className="slotsLeft">SLOTS LEFT</div>
+                  </div>
                 </div>
-                <div className="slots">
-                  <div className="slotsNumber">{slots.availableSlots}</div>
-                  <div className="slotsLeft">SLOTS LEFT</div>
+              );
+            } else {
+              return (
+                <div className="button" onClick={() => handleClick(slots)}>
+                  <div className="books">
+                    <div className="booksText">{slots.timeSlot}</div>
+                  </div>
+                  <div className="slots">
+                    <div className="slotsNumber">{slots.availableSlots}</div>
+                    <div className="slotsLeft">SLOTS LEFT</div>
+                  </div>
                 </div>
-              </div>
-            );
+              );
+            }
           })}
         </div>
       </div>

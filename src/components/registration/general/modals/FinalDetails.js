@@ -4,6 +4,8 @@ import { Form } from "react-bootstrap";
 import "./Detailstyle.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Error from "./Error";
+import validator from "validator";
 const FinalDetails = (props) => {
   const { newName } = props;
   const { newEmail } = props;
@@ -20,6 +22,11 @@ const FinalDetails = (props) => {
   const { price } = props;
   const totalPrice = (price * oneTick).toFixed(2);
   const [change, setChange] = useState(0);
+  const [error, setError] = useState(false);
+  const [slotsLeft, setSlotsLeft] = useState({
+    availableSlots: 100,
+    onPayment: 0,
+  });
   useEffect(() => {
     const script = document.createElement("script");
 
@@ -33,76 +40,99 @@ const FinalDetails = (props) => {
     };
   }, [change]);
   const handlePayment = async () => {
-    const config = {
-      headers: {
-        "X-BUSINESS-API-KEY":
-          "2e75e1e03e88d65e8dbc0ef36ee1a3b94ec7bdffe7ffdeccb8004ed4dd0306f3",
-        "Content-Type": "application/x-www-form-urlencoded",
-        "X-Requested-With": "XMLHttpRequest",
-      },
-    };
-    const params = new URLSearchParams();
-    params.append("amount", `${totalPrice}`);
-    params.append("currency", "SGD");
-    params.append("name", `${newName}`);
-    params.append("email", `${newEmail}`);
-    params.append(
-      "webhook",
-      "https://desolate-cliffs-96244.herokuapp.com/webhook"
-    );
+    await axios
+      .get("http://localhost:4000/book/check", {
+        params: { game: game, time: time },
+      })
+      .then(async (res) => {
+        if (oneTick > res.data.availableSlots - res.data.onPayment) {
+          setSlotsLeft(res.data);
+          setError(true);
+        } else {
+          await axios.put(
+            "https://desolate-cliffs-96244.herokuapp.com/book/onPayment",
+            { game: game, time: time, ticket: oneTick }
+          );
+          const config = {
+            headers: {
+              "X-BUSINESS-API-KEY":
+                "2e75e1e03e88d65e8dbc0ef36ee1a3b94ec7bdffe7ffdeccb8004ed4dd0306f3",
+              "Content-Type": "application/x-www-form-urlencoded",
+              "X-Requested-With": "XMLHttpRequest",
+            },
+          };
+          const params = new URLSearchParams();
+          params.append("amount", `${totalPrice}`);
+          params.append("currency", "SGD");
+          params.append("name", `${newName}`);
+          params.append("email", `${newEmail}`);
+          params.append("phone", `${newMobile}`);
+          params.append(
+            "webhook",
+            "https://desolate-cliffs-96244.herokuapp.com/webhook"
+          );
 
-    const postPayment = await axios.post(
-      "https://api.sandbox.hit-pay.com/v1/payment-requests",
-      params,
-      config
-    );
-    window.HitPay.init(
-      postPayment.data.url,
-      { domain: "sandbox.hit-pay.com", apiDomain: "sandbox.hit-pay.com" },
-      {
-        onClose: () => {
-          setLoading(true);
-          setChange(change + 1);
-          setTimeout(async () => {
-            try {
-              const getPayment = await axios.put(
-                "https://desolate-cliffs-96244.herokuapp.com/book",
-                {
-                  name: newName,
-                  email: newEmail,
-                  ticket: oneTick,
-                  game: game,
-                  amount: totalPrice,
-                  payment: postPayment.data.id,
-                  time: time,
-                  date: date,
-                }
-              );
-              setConfirmedShow(true);
-              let newData = [];
-              for (let i = 0; i < data.length; i++) {
-                if (data[i].timeSlot === getPayment.data.timeSlot) {
-                  newData.push({
-                    timeSlot: getPayment.data.timeSlot,
-                    availableSlots:
-                      availableSlots - getPayment.data.user.length,
-                  });
-                } else {
-                  newData.push(data[i]);
-                }
-              }
-              setData(newData);
-            } catch (err) {
-              setLoading(false);
+          const postPayment = await axios.post(
+            "https://api.sandbox.hit-pay.com/v1/payment-requests",
+            params,
+            config
+          );
+          window.HitPay.init(
+            postPayment.data.url,
+            { domain: "sandbox.hit-pay.com", apiDomain: "sandbox.hit-pay.com" },
+            {
+              onClose: () => {
+                axios.put(
+                  "https://desolcate-cliifs-96244.herokuapp.com/book/offPayment",
+                  {
+                    game: game,
+                    time: time,
+                    ticket: oneTick,
+                  }
+                );
+                setLoading(true);
+                setChange(change + 1);
+                setTimeout(async () => {
+                  try {
+                    const getPayment = await axios.put(
+                      "https://desolate-cliffs-96244.herokuapp.com/book",
+                      {
+                        name: newName,
+                        email: newEmail,
+                        ticket: oneTick,
+                        game: game,
+                        amount: totalPrice,
+                        payment: postPayment.data.id,
+                        time: time,
+                        date: date,
+                      }
+                    );
+                    setConfirmedShow(true);
+                    let newData = [];
+                    for (let i = 0; i < data.length; i++) {
+                      if (data[i].timeSlot === getPayment.data.timeSlot) {
+                        newData.push({
+                          timeSlot: getPayment.data.timeSlot,
+                          availableSlots: availableSlots - oneTick,
+                        });
+                      } else {
+                        newData.push(data[i]);
+                      }
+                    }
+                    setData(newData);
+                  } catch (err) {
+                    setLoading(false);
+                  }
+                  setLoading(false);
+                }, 3000);
+              },
             }
-            setLoading(false);
-          }, 3000);
-        },
-      }
-    );
-    window.HitPay.toggle({
-      paymentRequest: postPayment.data.id,
-    });
+          );
+          window.HitPay.toggle({
+            paymentRequest: postPayment.data.id,
+          });
+        }
+      });
   };
 
   return (
@@ -188,6 +218,15 @@ const FinalDetails = (props) => {
           </button>
         </Modal.Footer>
       </Modal>
+      <Error
+        show={error}
+        setShow={setError}
+        isValidateEmail={validator.isEmail(newEmail)}
+        isValidatePhone={validator.isMobilePhone(newMobile)}
+        isAvailable={oneTick <= slotsLeft.availableSlots - slotsLeft.onPayment}
+        availableSlots={slotsLeft.availableSlots}
+        onPayment={slotsLeft.onPayment}
+      ></Error>
     </>
   );
 };

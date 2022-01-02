@@ -18,14 +18,21 @@ const Details = (props) => {
   const { oneData } = props;
   const { game, date } = props;
   const [error, setError] = useState(false);
-
+  const [slotsLeft, setSlotsLeft] = useState({
+    availableSlots: 100,
+    onPayment: 0,
+  });
+  let temp = { availableSlots: 100, onPayment: 0 };
   const handleNext = async () => {
-    var slotsLeft = { availableSlots: 100 };
     await axios
       .get("https://desolate-cliffs-96244.herokuapp.com/book/check", {
         params: { game: game, time: oneData.timeSlot },
       })
-      .then((res) => (slotsLeft = res.data));
+      .then((res) => {
+        console.log(res.data);
+        setSlotsLeft(res.data);
+        temp = res.data;
+      });
     if (
       newName !== "" &&
       newEmail !== "" &&
@@ -33,7 +40,7 @@ const Details = (props) => {
       newMobile !== "" &&
       validator.isMobilePhone(newMobile) &&
       oneTick !== 0 &&
-      slotsLeft.availableSlots >= oneTick
+      temp.availableSlots >= oneTick
     ) {
       setShow(false);
       setFinalShow(true);
@@ -41,15 +48,11 @@ const Details = (props) => {
       setError(true);
     }
   };
-  let splitted = game.split(" ");
   return (
     <>
       <Modal show={show} centered>
         <Modal.Header>
-          <div className="esc-room">
-            {" "}
-            {splitted[0]} <span>{splitted[1]}</span>{" "}
-          </div>
+          <div className="esc-room">{game}</div>
           <div className="date">
             <div>{date}</div>
             <div>{oneData.timeSlot}</div>
@@ -60,7 +63,7 @@ const Details = (props) => {
             <Form.Group>
               <div className="form_body">
                 <Form.Label className="body_headings">
-                  Name<span className="asterisk">*</span>
+                  Full Name<span className="asterisk">*</span>
                 </Form.Label>
                 <Form.Control
                   className="form_control"
@@ -147,6 +150,9 @@ const Details = (props) => {
         setShow={setError}
         isValidateEmail={validator.isEmail(newEmail)}
         isValidatePhone={validator.isMobilePhone(newMobile)}
+        isAvailable={oneTick <= slotsLeft.availableSlots - slotsLeft.onPayment}
+        availableSlots={slotsLeft.availableSlots}
+        onPayment={slotsLeft.onPayment}
       ></Error>
     </>
   );

@@ -4,7 +4,7 @@ const FacebookLogo = () => {
   return (
     <div className="FacebookLogo">
       <a
-        href="https://www.facebook.com/PINTUGTD/1"
+        href="https://www.facebook.com/PINTUGTD/"
         target="_blank"
         rel="noopener noreferrer"
       >
