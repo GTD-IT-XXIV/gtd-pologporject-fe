@@ -19,6 +19,6 @@ export const heistProps = {
   },
   SynopsisProps: {
     synopsis:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "Sunrise Ruby - the most exquisite and exorbitant piece of treasure in the world has ever seen. Sought after by every person of wealth, it is no wonder that it has caught the attention of infamous syndicate LAVERNA. After a long and extensive search, the elites of LAVERNA has chosen five of its most daring and skilled members for this martyr operation. Let the biggest, most impossible, and most ambitious heist in history... begin.",
   },
 };

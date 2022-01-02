@@ -41,7 +41,7 @@ const FinalDetails = (props) => {
   }, [change]);
   const handlePayment = async () => {
     await axios
-      .get("http://localhost:4000/book/check", {
+      .get("https://desolate-cliffs-96244.herokuapp.com/book/check", {
         params: { game: game, time: time },
       })
       .then(async (res) => {
