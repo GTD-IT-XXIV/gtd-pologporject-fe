@@ -40,7 +40,7 @@ const Details = (props) => {
       newMobile !== "" &&
       validator.isMobilePhone(newMobile) &&
       oneTick !== 0 &&
-      temp.availableSlots >= oneTick
+      temp.availableSlots - temp.onPayment >= oneTick
     ) {
       setShow(false);
       setFinalShow(true);

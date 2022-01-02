@@ -81,9 +81,9 @@ const FinalDetails = (props) => {
             postPayment.data.url,
             { domain: "sandbox.hit-pay.com", apiDomain: "sandbox.hit-pay.com" },
             {
-              onClose: () => {
-                axios.put(
-                  "https://desolcate-cliifs-96244.herokuapp.com/book/offPayment",
+              onClose: async () => {
+                await axios.put(
+                  "https://desolate-cliifs-96244.herokuapp.com/book/offPayment",
                   {
                     game: game,
                     time: time,

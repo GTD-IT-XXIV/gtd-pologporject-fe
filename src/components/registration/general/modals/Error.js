@@ -23,7 +23,7 @@ export default function Error(props) {
     mobile: "Enter the correct phone number",
     email: "Enter the correct email address",
     fill: "Please fill in the details",
-    full: `Capacity left is ${availableSlots} + ${onPayment} on going payments`,
+    full: `Capacity left is ${availableSlots} and ${onPayment} on going payments`,
   };
   return (
     <Modal show={show} centered>
