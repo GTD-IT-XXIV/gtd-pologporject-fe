@@ -1,0 +1,127 @@
+.regispage_container{
+    padding-top: 3vh;
+    text-align: center;
+    color:white;
+}
+.pic{
+    height:50vh;
+    background-image: url(../assets/image10.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.pic-text{
+    padding-top: 15vh;
+}
+.count{
+    font-size: 3vh;  
+    color:white;
+    font-family: Merriweather;
+    font-weight: 900;
+    letter-spacing: 0em;
+    line-height: 3vh;
+}
+.monte{
+    font-family: Merriweather;
+    font-size: 11vh;
+    font-style: normal;
+    font-weight: 900;
+    letter-spacing: 0em;
+    color:white;
+}
+.horror{    
+    font-family: Merriweather;
+    font-size: 3vh;
+    font-style: normal;
+    font-weight: 900;
+    letter-spacing: 0em;
+    color:white;
+    line-height: 3vh;
+}
+.buy_tickets{
+    font-family: Men of Nihilist;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 7vh;
+}
+.buy_tickets_tickets{
+    color:red;
+}
+.bolted_text{
+    font-family: Poppins;
+font-size: 5vh;
+font-style: normal;
+font-weight: 700;
+letter-spacing: 0em;
+text-align: center;
+}
+.non_bolted_text{
+    font-family: Poppins;
+    font-size: 3vh;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0em;
+}
+.bolted_text .non_bolted_text{
+    font-family: Poppins;
+    font-size: 3vh;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0em;
+}
+
+.choose{
+    padding-top:7vh;
+    font-family: Men of Nihilist;
+    font-size: 5vh;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0em;
+    text-align: center;
+}
+.timeslots{
+    color:red;
+}
+.upcoming{
+    font-family: Men of Nihilist;
+    font-size: 4vw;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0em;
+    text-align: center;
+
+}
+.upcoming span{
+    color:red;
+}
+.upcoming_pics{
+    display: flex;
+    justify-content: space-evenly;
+}
+.osiris{
+    border: 3px solid #FFFFFF;
+}
+.sanatorium{
+    border:3px solid #FFFFFF;
+}
+.buttons{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.button{
+    border:2px solid red;
+    border-radius: 2vh;
+    height:15vh;
+    width:35vh;
+    background-color:black;
+    display:inline-grid;
+    margin:5vh;
+}
+.books{
+    
+}
+.slots{
+    
+    
+}
