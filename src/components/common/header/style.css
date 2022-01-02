@@ -27,43 +27,45 @@
 .home-title {
   text-align: center;
   cursor: pointer;
+  transition: 0.5s;
 }
 .home-title:hover {
   color: red;
-  transition: 0.5s;
 }
 .buy-tickets-title {
   text-align: center;
   cursor: pointer;
+  transition: 0.5s;
 }
 .buy-tickets-title:hover {
   color: red;
-  transition: 0.5s;
 }
 .promo-title {
   text-align: center;
   cursor: pointer;
+  transition: 0.5s;
 }
 .promo-title:hover {
   color: red;
-  transition: 0.5s;
 }
 .now-playing-title {
   text-align: center;
   cursor: pointer;
+  transition: 0.5s;
 }
 .now-playing-title:hover {
   color: red;
-  transition: 0.5s;
 }
 .gtd-unsolved-title {
   font-family: "Men of Nihilist", sans-serif;
   font-size: 3.25vw;
   cursor: pointer;
 }
+.gtd-unsolved-title span {
+  transition: 0.5s;
+}
 .gtd-unsolved-title:hover span {
   color: red;
-  transition: 0.5s;
 }
 .dropdown {
   display: block;

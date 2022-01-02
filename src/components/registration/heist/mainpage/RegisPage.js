@@ -1,5 +1,5 @@
 import "./RegisPagestyle.css";
-import bgImage from "../../../game/escaperoom/assets/image.gif";
+import bgImage from "../../../game/heist/assets/image.gif";
 import "../../../home/components/GameDisplay/style.css";
 import Poster from "../../../home/assets/Poster.png";
 import Poster2 from "../../../home/assets/casefile.jpg";
@@ -25,8 +25,8 @@ const RegisPage = (props) => {
         data-aos="zoom-in"
       >
         <div className="pic-text">
-          <div className="monte">deception</div>
-          <div className="horror">HORROR</div>
+          <div className="monte">heist</div>
+          <div className="horror">MYSTERY</div>
         </div>
       </div>
       <div className="info" data-aos="fade-up">
@@ -35,7 +35,7 @@ const RegisPage = (props) => {
         </div>
         <div className="Date">
           <div className="bolted_text">Date</div>
-          <div className="non_bolted_text">15 January 2022</div>
+          <div className="non_bolted_text">29 January 2022</div>
         </div>
         <div className="Duration">
           <div className="bolted_text">Duration</div>
@@ -43,7 +43,7 @@ const RegisPage = (props) => {
         </div>
         <div className="Price">
           <div className="bolted_text">Price</div>
-          <div className="non_bolted_text">Individual: $6.5/Person</div>
+          <div className="non_bolted_text">Individual: $8/Person</div>
         </div>
       </div>
       <div className="timeslot" data-aos="zoom-in" data-aos-duration="1250">
@@ -78,12 +78,12 @@ const RegisPage = (props) => {
           <div
             className="GamesDisplay"
             onClick={() => {
-              navigate("/casefile");
+              navigate("/escaperoom");
             }}
           >
             <div
               className="GamesImage"
-              style={{ backgroundImage: `url(${Poster2})` }}
+              style={{ backgroundImage: `url(${Poster})` }}
             >
               <div className="GamesImageOverlay">
                 <Suitcase />
@@ -96,19 +96,19 @@ const RegisPage = (props) => {
           <div
             className="GamesDisplay"
             onClick={() => {
-              navigate("/heist");
+              navigate("/casefile");
             }}
           >
             <div
               className="GamesImage"
-              style={{ backgroundImage: `url(${Poster3})` }}
+              style={{ backgroundImage: `url(${Poster2})` }}
             >
               <div className="GamesImageOverlay">
-                <DollarSign />
+                <PuzzlePiece />
                 <div className="GamesButton">PLAY</div>
               </div>
             </div>
-            <div className="GamesDate">29 January</div>
+            <div className="GamesDate">15 January</div>
           </div>
         </div>
       </div>

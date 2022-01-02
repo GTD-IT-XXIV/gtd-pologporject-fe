@@ -52,7 +52,7 @@ const Home = () => {
               </div>
               <TicketLogo />
               <div className="HowToPlayDescriptionRight">
-                <div className="HowToPlayDescriptionTitle" data-aos="fade-left">
+                <div className="HowToPlayDescriptionTitle" data-aos="fade-up">
                   BOOK YOUR TICKET
                 </div>
               </div>
@@ -64,10 +64,7 @@ const Home = () => {
           <div className="HowToPlaySubSection">
             <div className="HowToPlayDescriptionOnLeft">
               <div className="HowToPlayDescriptionLeft">
-                <div
-                  className="HowToPlayDescriptionTitle"
-                  data-aos="fade-right"
-                >
+                <div className="HowToPlayDescriptionTitle" data-aos="fade-up">
                   MISSION BRIEFING
                 </div>
               </div>
@@ -89,7 +86,7 @@ const Home = () => {
               </div>
               <MagnifyLogo />
               <div className="HowToPlayDescriptionRight">
-                <div className="HowToPlayDescriptionTitle" data-aos="fade-left">
+                <div className="HowToPlayDescriptionTitle" data-aos="fade-up">
                   FIND THE CLUES
                 </div>
               </div>
@@ -101,10 +98,7 @@ const Home = () => {
           <div className="HowToPlaySubSection">
             <div className="HowToPlayDescriptionOnLeft">
               <div className="HowToPlayDescriptionLeft">
-                <div
-                  className="HowToPlayDescriptionTitle"
-                  data-aos="fade-right"
-                >
+                <div className="HowToPlayDescriptionTitle" data-aos="fade-up">
                   SOLVE THE PUZZLE
                 </div>
               </div>
@@ -126,7 +120,7 @@ const Home = () => {
               </div>
               <EscapeLogo />
               <div className="HowToPlayDescriptionRight">
-                <div className="HowToPlayDescriptionTitle" data-aos="fade-left">
+                <div className="HowToPlayDescriptionTitle" data-aos="fade-up">
                   ESCAPE!
                 </div>
               </div>

@@ -1,5 +1,5 @@
 import "./RegisPagestyle.css";
-import bgImage from "../../../game/escaperoom/assets/image.gif";
+import bgImage from "../../../game/casefile/assets/image.gif";
 import "../../../home/components/GameDisplay/style.css";
 import Poster from "../../../home/assets/Poster.png";
 import Poster2 from "../../../home/assets/casefile.jpg";
@@ -25,8 +25,8 @@ const RegisPage = (props) => {
         data-aos="zoom-in"
       >
         <div className="pic-text">
-          <div className="monte">deception</div>
-          <div className="horror">HORROR</div>
+          <div className="monte">misfortune</div>
+          <div className="horror">MYSTERY</div>
         </div>
       </div>
       <div className="info" data-aos="fade-up">
@@ -78,15 +78,15 @@ const RegisPage = (props) => {
           <div
             className="GamesDisplay"
             onClick={() => {
-              navigate("/casefile");
+              navigate("/escaperoom");
             }}
           >
             <div
               className="GamesImage"
-              style={{ backgroundImage: `url(${Poster2})` }}
+              style={{ backgroundImage: `url(${Poster})` }}
             >
               <div className="GamesImageOverlay">
-                <Suitcase />
+                <PuzzlePiece />
                 <div className="GamesButton">PLAY</div>
               </div>
             </div>

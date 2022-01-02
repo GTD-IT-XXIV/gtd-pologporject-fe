@@ -3,20 +3,20 @@ import image from "./assets/image.gif";
 export const escapeRoomProps = {
   CountdownProps: {
     date: "January 15, 2022 00:00:00",
-    title: "escape room",
-    genre: "HORROR | ADVENTURE",
+    title: "deception",
+    genre: "HORROR",
     CTAText: "BUY TICKET",
     image: image,
-    link: "/escaperoom/register",
+    link: "/escaperoom/registration",
   },
   TrailerProps: {
     duration: "2 hours",
-    difficulty: "•••••",
+    difficulty: "••••",
     capacity: "5-7 person(s)",
     videoId: "MzznUfFGcOg",
   },
   SynopsisProps: {
     synopsis:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "It was a cold, dreary night at the chateaux. Not a breeze could be heard before suddenly, you hear the front door blasted shut. Mysterious symbols and a sense of eerie could be felt in the air, on the walls, in your skin. Symbols and puzzles briskly appear waiting to be deciphered. Slowly, you realize that you have to play by their rules. One false move and they’ll come after you. Will you able to escape?",
   },
 };

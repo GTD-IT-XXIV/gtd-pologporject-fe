@@ -1,204 +1,118 @@
-import { useState, useRef } from "react";
-import Details from "./modals/Details";
-import FinalDetails from "./modals/FinalDetails";
-import HitPay from "./modals/HitPay";
+import { useState, useEffect } from "react";
+import Details from "../general/modals/Details";
+import FinalDetails from "../general/modals/FinalDetails";
 import axios from "axios";
-import './style.css';
+import "./style.css";
 import RegisPage from "./mainpage/RegisPage";
-import Confirmed from "./modals/Confirmed";
+import Confirmed from "../general/modals/Confirmed";
+import Backdrop from "@mui/material/Backdrop";
+import CircularProgress from "@mui/material/CircularProgress";
 export default function Registration(props) {
+  const { image1, image2, bgImage } = props;
+  const [loading, setLoading] = useState(false);
   const [show, setShow] = useState(false);
-  const [confirmedShow,setConfirmedShow] = useState(false);
-  const handleClick = () => {
+  const [confirmedShow, setConfirmedShow] = useState(false);
+  const handleClick = (slots) => {
     setShow(true);
+    setOneData({
+      timeSlot: slots.timeSlot,
+      availableSlots: slots.availableSlots,
+      price: slots.price,
+    });
   };
   const [finalShow, setFinalShow] = useState(false);
 
-  const name = useRef("");
   const [newName, setNewName] = useState("");
   const nameChange = (e) => {
     setNewName(e.target.value);
   };
 
-  const email = useRef("");
   const [newEmail, setNewEmail] = useState("");
   const emailChange = (e) => {
     setNewEmail(e.target.value);
   };
 
-  const mobile = useRef("");
   const [newMobile, setNewMobile] = useState("");
   const mobileChange = (e) => {
     setNewMobile(e.target.value);
   };
 
-  const [oneTick, setOneTick] = useState(0);
-  const [fourTick, setFourTick] = useState(0);
-  const [sevenTick, setSevenTick] = useState(0);
+  const [oneTick, setOneTick] = useState(1);
 
   const [data, setData] = useState([]);
-  const [change, setChange] = useState(0);
-  const [game, setGame] = useState({ id: 0, name: "", amount: 0 });
-  const [loading, setLoading] = useState(false);
+  const [oneData, setOneData] = useState({
+    timeSlot: "",
+    availableSlots: 0,
+    price: 0,
+  });
 
-  // async function hitPayClick(values, name, email) {
-  //   setFinalShow(false);
-  //   const config = {
-  //     headers: {
-  //       "X-BUSINESS-API-KEY":
-  //         "2e75e1e03e88d65e8dbc0ef36ee1a3b94ec7bdffe7ffdeccb8004ed4dd0306f3",
-  //       "Content-Type": "application/x-www-form-urlencoded",
-  //       "X-Requested-With": "XMLHttpRequest",
-  //     },
-  //   };
-  //   const params = new URLSearchParams();
-  //   params.append("amount", `${values.price}`);
-  //   params.append("currency", "SGD");
-  //   params.append("name", `${name}`);
-  //   params.append("email", `${email}`);
-  //   params.append(
-  //     "webhook",
-  //     "https://desolate-cliffs-96244.herokuapp.com/webhook"
-  //   );
-
-  //   const postPayment = await axios.post(
-  //     "https://api.sandbox.hit-pay.com/v1/payment-requests",
-  //     params,
-  //     config
-  //   );
-
-  //   window.HitPay.init(
-  //     postPayment.data.url,
-  //     { domain: "sandbox.hit-pay.com", apiDomain: "sandbox.hit-pay.com" },
-  //     {
-  //       onClose: () => {
-  //         setChange(change + 1);
-  //         setLoading(true);
-  //         setTimeout(async () => {
-  //           const getPayment = await axios.put(
-  //             "https://desolate-cliffs-96244.herokuapp.com/book",
-  //             //"http://localhost:4000/book",
-  //             {
-  //               name: name,
-  //               email: email,
-  //               ticket: 1,
-  //               game: values.nameOfGame,
-  //               amount: values.price,
-  //               payment: postPayment.data.id,
-  //             }
-  //           );
-  //           console.log(getPayment);
-  //           setLoading(false);
-  //           if (getPayment.status === 200) {
-  //             //setShowCode(true);
-  //             setData(getPayment.data);
-  //           }
-  //         }, 3000);
-  //       },
-  //     }
-  //   );
-
-  //   window.HitPay.toggle({
-  //     paymentRequest: postPayment.data.id,
-  //   });
-  // }
+  useEffect(() => {
+    setLoading(true);
+    axios
+      .get("https://desolate-cliffs-96244.herokuapp.com/book/slot", {
+        params: { game: "Escape Room" },
+      })
+      .then((res) => {
+        setData(res.data);
+        setLoading(false);
+      })
+      .catch((err) => console.log(err));
+  }, []);
 
   return (
     <>
-      <div className="regis">Registration</div>
-      <button className="front-button" onClick={handleClick}>-</button>
-      <RegisPage
-      show={show}
-      setShow={setShow}
-      finalShow={finalShow}
-      setFinalShow={setFinalShow}
-      name={name}
-      newName={newName}
-      setNewName={setNewName}
-      nameChange={nameChange}
-      email={email}
-      newEmail={newEmail}
-      setNewEmail={setNewEmail}
-      emailChange={emailChange}
-      mobile={mobile}
-      newMobile={newMobile}
-      setNewMobile={setNewMobile}
-      mobileChange={mobileChange}
-      oneTick={oneTick}
-      setOneTick={setOneTick}
-      fourTick={fourTick}
-      setFourTick={setFourTick}
-      sevenTick={sevenTick}
-      setSevenTick={setSevenTick}
-      handleClick={handleClick}
-      />
+      <RegisPage handleClick={handleClick} data={data} />
       <Details
         show={show}
         setShow={setShow}
-        finalShow={finalShow}
         setFinalShow={setFinalShow}
-        name={name}
         newName={newName}
-        setNewName={setNewName}
         nameChange={nameChange}
-        email={email}
         newEmail={newEmail}
-        setNewEmail={setNewEmail}
         emailChange={emailChange}
-        mobile={mobile}
         newMobile={newMobile}
-        setNewMobile={setNewMobile}
         mobileChange={mobileChange}
         oneTick={oneTick}
         setOneTick={setOneTick}
-        fourTick={fourTick}
-        setFourTick={setFourTick}
-        sevenTick={sevenTick}
-        setSevenTick={setSevenTick}
+        oneData={oneData}
+        game={"Escape Room"}
+        date={"15 January 2022"}
       />
       <FinalDetails
-        show={show}
         setShow={setShow}
         finalShow={finalShow}
         setFinalShow={setFinalShow}
-        confirmedShow={confirmedShow}
-        setConfirmedShow={setConfirmedShow}
-        name={name}
         newName={newName}
-        setNewName={setNewName}
-        nameChange={nameChange}
-        email={email}
         newEmail={newEmail}
-        setNewEmail={setNewEmail}
-        emailChange={emailChange}
-        mobile={mobile}
         newMobile={newMobile}
-        setNewMobile={setNewMobile}
-        mobileChange={mobileChange}
         oneTick={oneTick}
-        setOneTick={setOneTick}
-        fourTick={fourTick}
-        setFourTick={setFourTick}
-        sevenTick={sevenTick}
-        setSevenTick={setSevenTick}
-
+        price={oneData.price}
+        data={data}
+        setData={setData}
+        game={"Escape Room"}
+        time={oneData.timeSlot}
+        date={"15 January 2022"}
+        setConfirmedShow={setConfirmedShow}
+        availableSlots={oneData.availableSlots}
+        setLoading={setLoading}
       />
       <Confirmed
-      confirmedShow={confirmedShow}
-      setConfirmedShow={setConfirmedShow}
+        confirmedShow={confirmedShow}
+        setConfirmedShow={setConfirmedShow}
+        setNewName={setNewName}
+        setNewEmail={setNewEmail}
+        setNewMobile={setNewMobile}
+        setOneTick={setOneTick}
+        time={oneData.timeSlot}
+        date={"15 January 2022"}
+        game={"Escape Room"}
       />
-      {/* <HitPay 
-      finalShow={finalShow} 
-      setFinalShow={setFinalShow} 
-      data={data}
-      setData={setData}
-      game={game}
-      setGame={setGame}
-      change={change}
-      setChange={setChange}
-      loading={loading}
-      setLoading={setLoading}
-      /> */}
+      <Backdrop
+        sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        open={loading}
+      >
+        <CircularProgress color="secondary"></CircularProgress>
+      </Backdrop>
     </>
   );
 }

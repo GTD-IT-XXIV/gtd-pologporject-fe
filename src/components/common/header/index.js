@@ -20,24 +20,24 @@ const Header = () => {
           <div className="dropdown">
             <div
               onClick={() => {
-                navigate("escaperoom");
+                navigate("/escaperoom");
               }}
             >
-              ESCAPE ROOM
+              DECEPTION
             </div>
             <div
               onClick={() => {
-                navigate("casefile");
+                navigate("/casefile");
               }}
             >
-              CASE FILE
+              MISFORTUNE
             </div>
           </div>
         </div>
         <div
           className="gtd-unsolved-title"
           onClick={() => {
-            navigate("");
+            navigate("/");
           }}
         >
           <div>
@@ -51,34 +51,27 @@ const Header = () => {
           <div className="buy-tickets-dropdown">
             <div
               onClick={() => {
-                navigate("escaperoom/registration");
+                navigate("/escaperoom/registration");
               }}
             >
-              ESCAPE ROOM
+              DECEPTION
             </div>
             <div
               onClick={() => {
-                navigate("casefile/registration");
+                navigate("/casefile/registration");
               }}
             >
-              CASE FILE
-            </div>
-            <div
-              onClick={() => {
-                navigate("heist/registration");
-              }}
-            >
-              HEIST
+              MISFORTUNE
             </div>
           </div>
         </div>
         <div
           className="promo-title"
           onClick={() => {
-            navigate("promo");
+            navigate("/heist");
           }}
         >
-          <p className="text">PROMO</p>
+          <p className="text">COMING SOON</p>
         </div>
       </div>
     </div>
