@@ -82,8 +82,9 @@
 }
 .final_form_control {
   height: 3vh;
-  width: 10vw;
+  width: 15vw;
   text-align: right;
+  font-size: medium;
 }
 .tickets_heading {
   font-family: Poppins;

@@ -12,8 +12,8 @@ export const escapeRoomProps = {
   TrailerProps: {
     duration: "2 hours",
     difficulty: "••••",
-    capacity: "5-7 person(s)",
-    videoId: "MzznUfFGcOg",
+    capacity: "5 person(s)",
+    videoId: "QClx11FuMUs",
   },
   SynopsisProps: {
     synopsis:

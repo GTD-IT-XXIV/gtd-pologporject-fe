@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Error from "./Error";
 import validator from "validator";
+
 const FinalDetails = (props) => {
   const { newName } = props;
   const { newEmail } = props;
@@ -23,6 +24,7 @@ const FinalDetails = (props) => {
   const totalPrice = (price * oneTick).toFixed(2);
   const [change, setChange] = useState(0);
   const [error, setError] = useState(false);
+  const [errRes, setErrRes] = useState("");
   const [slotsLeft, setSlotsLeft] = useState({
     availableSlots: 100,
     onPayment: 0,
@@ -31,6 +33,7 @@ const FinalDetails = (props) => {
     const script = document.createElement("script");
 
     script.src = "https://sandbox.hit-pay.com/hitpay.js";
+    // script.src = "https://hit-pay.com/hitpay.js";
     script.async = true;
 
     document.body.appendChild(script);
@@ -40,99 +43,128 @@ const FinalDetails = (props) => {
     };
   }, [change]);
   const handlePayment = async () => {
-    await axios
-      .get("https://desolate-cliffs-96244.herokuapp.com/book/check", {
+    const checkSlots = await axios.get(
+      "https://desolate-cliffs-96244.herokuapp.com/book/check",
+      {
         params: { game: game, time: time },
-      })
-      .then(async (res) => {
-        if (oneTick > res.data.availableSlots - res.data.onPayment) {
-          setSlotsLeft(res.data);
-          setError(true);
-        } else {
-          await axios.put(
-            "https://desolate-cliffs-96244.herokuapp.com/book/onPayment",
-            { game: game, time: time, ticket: oneTick }
-          );
-          const config = {
-            headers: {
-              "X-BUSINESS-API-KEY":
-                "2e75e1e03e88d65e8dbc0ef36ee1a3b94ec7bdffe7ffdeccb8004ed4dd0306f3",
-              "Content-Type": "application/x-www-form-urlencoded",
-              "X-Requested-With": "XMLHttpRequest",
-            },
-          };
-          const params = new URLSearchParams();
-          params.append("amount", `${totalPrice}`);
-          params.append("currency", "SGD");
-          params.append("name", `${newName}`);
-          params.append("email", `${newEmail}`);
-          params.append("phone", `${newMobile}`);
-          params.append(
-            "webhook",
-            "https://desolate-cliffs-96244.herokuapp.com/webhook"
-          );
-
-          const postPayment = await axios.post(
-            "https://api.sandbox.hit-pay.com/v1/payment-requests",
-            params,
-            config
-          );
-          window.HitPay.init(
-            postPayment.data.url,
-            { domain: "sandbox.hit-pay.com", apiDomain: "sandbox.hit-pay.com" },
-            {
-              onClose: async () => {
-                await axios.put(
-                  "https://desolate-cliffs-96244.herokuapp.com/book/offPayment",
-                  {
-                    game: game,
-                    time: time,
-                    ticket: oneTick,
-                  }
-                );
-                setLoading(true);
-                setChange(change + 1);
-                setTimeout(async () => {
-                  try {
-                    const getPayment = await axios.put(
-                      "https://desolate-cliffs-96244.herokuapp.com/book",
-                      {
-                        name: newName,
-                        email: newEmail,
-                        ticket: oneTick,
-                        game: game,
-                        amount: totalPrice,
-                        payment: postPayment.data.id,
-                        time: time,
-                        date: date,
-                      }
-                    );
-                    setConfirmedShow(true);
-                    let newData = [];
-                    for (let i = 0; i < data.length; i++) {
-                      if (data[i].timeSlot === getPayment.data.timeSlot) {
-                        newData.push({
-                          timeSlot: getPayment.data.timeSlot,
-                          availableSlots: availableSlots - oneTick,
-                        });
-                      } else {
-                        newData.push(data[i]);
-                      }
+      }
+    );
+    if (oneTick > checkSlots.data.availableSlots - checkSlots.data.onPayment) {
+      setSlotsLeft(checkSlots.data);
+      setError(true);
+    } else {
+      await axios.put(
+        "https://desolate-cliffs-96244.herokuapp.com/book/onPayment",
+        { game: game, time: time, ticket: oneTick }
+      );
+      const config = {
+        headers: {
+          "X-BUSINESS-API-KEY":
+            "2e75e1e03e88d65e8dbc0ef36ee1a3b94ec7bdffe7ffdeccb8004ed4dd0306f3",
+          // "647961d39123d34ebad53fe0e635b0a72fffbe71062a5a68855e2c852da5e86c",
+          "Content-Type": "application/x-www-form-urlencoded",
+          "X-Requested-With": "XMLHttpRequest",
+        },
+      };
+      const params = new URLSearchParams();
+      params.append("amount", `${totalPrice}`);
+      params.append("currency", "SGD");
+      params.append("name", `${newName}`);
+      params.append("email", `${newEmail}`);
+      params.append("phone", `${newMobile}`);
+      params.append("send_email", true);
+      params.append("expires_in", "5 mins");
+      params.append(
+        "webhook",
+        "https://desolate-cliffs-96244.herokuapp.com/webhook"
+      );
+      try {
+        const postPayment = await axios.post(
+          "https://api.sandbox.hit-pay.com/v1/payment-requests",
+          // "https://api.hit-pay.com/v1/payment-requests",
+          params,
+          config
+        );
+        window.HitPay.init(
+          postPayment.data.url,
+          {
+            domain: "sandbox.hit-pay.com",
+            apiDomain: "sandbox.hit-pay.com",
+            closeOnError: true,
+          },
+          // {
+          //   domain: "hit-pay.com",
+          //   apiDomain: "hit-pay.com",
+          //   closeOnError: true,
+          // },
+          {
+            onClose: async () => {
+              setLoading(true);
+              await axios.put(
+                "https://desolate-cliffs-96244.herokuapp.com/book/offPayment",
+                {
+                  game: game,
+                  time: time,
+                  ticket: oneTick,
+                }
+              );
+              setChange(change + 1);
+              setTimeout(async () => {
+                try {
+                  const getPayment = await axios.put(
+                    "https://desolate-cliffs-96244.herokuapp.com/book",
+                    {
+                      name: newName,
+                      email: newEmail,
+                      ticket: oneTick,
+                      game: game,
+                      amount: totalPrice,
+                      payment: postPayment.data.id,
+                      time: time,
+                      date: date,
                     }
-                    setData(newData);
-                  } catch (err) {
-                    setLoading(false);
+                  );
+                  setConfirmedShow(true);
+                  let newData = [];
+                  for (let i = 0; i < data.length; i++) {
+                    if (data[i].timeSlot === getPayment.data.timeSlot) {
+                      newData.push({
+                        timeSlot: getPayment.data.timeSlot,
+                        availableSlots: availableSlots - oneTick,
+                        price: price,
+                      });
+                    } else {
+                      newData.push(data[i]);
+                    }
                   }
+                  setData(newData);
                   setLoading(false);
-                }, 3000);
-              },
-            }
-          );
-          window.HitPay.toggle({
-            paymentRequest: postPayment.data.id,
-          });
-        }
-      });
+                } catch (err) {
+                  setLoading(false);
+                  setError(true);
+                  setErrRes(err.response.data);
+                }
+              }, 3000);
+            },
+          }
+        );
+        window.HitPay.toggle({
+          paymentRequest: postPayment.data.id,
+          method: "paynow_online",
+        });
+      } catch (err) {
+        setErrRes(err.response.data);
+        setError(true);
+        await axios.put(
+          "https://desolate-cliffs-96244.herokuapp.com/book/offPayment",
+          {
+            game: game,
+            time: time,
+            ticket: oneTick,
+          }
+        );
+      }
+    }
   };
 
   return (
@@ -189,12 +221,14 @@ const FinalDetails = (props) => {
 
           <div className="final_tickets">
             <div className="tickets_heading">Number of Tickets</div>
-            <div>{oneTick !== 0 && <div>{oneTick} Single Ticket(s)</div>}</div>
+            <div className="final_form_control">
+              {oneTick !== 0 && <div>{oneTick} Single Ticket(s)</div>}
+            </div>
           </div>
 
           <div className="amount">
             <div className="tickets_heading">Total Amount</div>
-            <div>{totalPrice} SGD</div>
+            <div className="final_form_control">{totalPrice} SGD</div>
           </div>
         </Modal.Body>
         <Modal.Footer>
@@ -223,9 +257,10 @@ const FinalDetails = (props) => {
         setShow={setError}
         isValidateEmail={validator.isEmail(newEmail)}
         isValidatePhone={validator.isMobilePhone(newMobile)}
-        isAvailable={oneTick <= slotsLeft.availableSlots - slotsLeft.onPayment}
+        isAvailable={oneTick > slotsLeft.availableSlots - slotsLeft.onPayment}
         availableSlots={slotsLeft.availableSlots}
         onPayment={slotsLeft.onPayment}
+        error={errRes}
       ></Error>
     </>
   );

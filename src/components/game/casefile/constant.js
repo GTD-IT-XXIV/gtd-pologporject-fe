@@ -16,9 +16,9 @@ export const casefileProps = {
   },
   TrailerProps: {
     duration: "2 hours",
-    difficulty: "xxxx",
+    difficulty: "••••",
     capacity: "5 person(s)",
-    videoId: "MzznUfFGcOg",
+    videoId: "6ihbNSM59E0",
   },
   SynopsisProps: {
     synopsis:

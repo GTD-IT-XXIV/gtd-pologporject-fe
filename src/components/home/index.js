@@ -15,7 +15,7 @@ const Home = () => {
     myRef.current.scrollIntoView({ behavior: "smooth" });
 
   useEffect(() => {
-    window.scrollTo({ top: -5000, behavior: "smooth" });
+    window.scrollTo({ top: -10000, behavior: "smooth" });
   }, []);
   return (
     <div>
@@ -32,11 +32,12 @@ const Home = () => {
           data-aos="zoom-in"
           data-aos-duration="500"
         >
-          GTD Unsolved is a series of escape room-esque games where you are
-          tasked to solve cases and figure out their underlying enigmatic
-          stories along the way. Expect brain-teasing puzzles and tantalizing
-          mysteries for you and your inquisitive friends and colleagues to
-          discover!
+          GTD Unsolved is a series of mind-bending, story-driven, and
+          character-rich games, presented by the Project Officer and Logistics
+          team. Consisting of Escape Room, Case File, and Heist games, you will
+          be tasked to delve and discover the connection between the storyline
+          and gameplay. Enjoy these handcrafted puzzles and mechanics which are
+          made for you and your friends.
         </div>
 
         <div className="HowToPlayTitle">

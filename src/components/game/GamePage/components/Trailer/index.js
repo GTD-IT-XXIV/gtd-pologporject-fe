@@ -20,7 +20,10 @@ const Trailer = ({ duration, difficulty, capacity, videoId }) => {
 
         <div className="Details">
           <div className="DetailTitle">Difficulty</div>
-          <div className="DetailDescriptionRed">{difficulty}</div>
+          <div className="DetailDescriptionRed">
+            {difficulty}
+            <span className="DetailDescriptionGray">•</span>
+          </div>
         </div>
 
         <div className="Details">

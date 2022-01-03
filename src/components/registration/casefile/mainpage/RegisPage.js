@@ -1,7 +1,7 @@
 import "./RegisPagestyle.css";
 import bgImage from "../../../game/casefile/assets/image.gif";
 import "../../../home/components/GameDisplay/style.css";
-import Poster from "../../../home/assets/Poster.png";
+import Poster from "../../../home/assets/escaperoom.jpg";
 import Poster2 from "../../../home/assets/casefile.jpg";
 import Poster3 from "../../../home/assets/heist.jpg";
 import DollarSign from "../../../home/assets/DollarSign";

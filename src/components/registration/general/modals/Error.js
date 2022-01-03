@@ -9,21 +9,27 @@ export default function Error(props) {
     isValidatePhone,
     isValidateEmail,
     isAvailable,
+    error,
     availableSlots,
     onPayment,
   } = props;
+
   const theError = isValidatePhone
     ? isValidateEmail
-      ? isAvailable
-        ? "fill"
-        : "full"
+      ? error === "not enough available slots!" || isAvailable
+        ? "full"
+        : error === "Cannot read property 'payment_request_id' of null" ||
+          error === "payment not found"
+        ? "fail"
+        : "fill"
       : "email"
     : "mobile";
-  const error = {
+  const errorMessage = {
     mobile: "Enter the correct phone number",
     email: "Enter the correct email address",
     fill: "Please fill in the details",
-    full: `Capacity left is ${availableSlots} and ${onPayment} on going payments`,
+    full: `Your booking exceeded the available slots. Available Slots: ${availableSlots}, Ongoing Payments: ${onPayment}.`,
+    fail: "Payment not success!",
   };
   return (
     <Modal show={show} centered>
@@ -31,7 +37,7 @@ export default function Error(props) {
         <div>
           <Exclamation></Exclamation>
         </div>
-        <div className="ErrorText">{error[theError]}</div>
+        <div className="ErrorText">{errorMessage[theError]}</div>
         <div
           className="ErrorButton"
           onClick={(e) => {

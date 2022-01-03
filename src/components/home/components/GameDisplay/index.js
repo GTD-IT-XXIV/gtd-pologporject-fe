@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import Poster from "../../assets/Poster.png";
+import Poster from "../../assets/escaperoom.jpg";
 import Poster2 from "../../assets/casefile.jpg";
 import Poster3 from "../../assets/heist.jpg";
 import DollarSign from "../../assets/DollarSign";

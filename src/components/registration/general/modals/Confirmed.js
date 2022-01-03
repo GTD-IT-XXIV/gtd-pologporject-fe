@@ -17,10 +17,17 @@ const Confirmed = (props) => {
       <Modal.Body>
         <div className="confirmed_text">
           <div>Thank you for your purchase!</div>
+          <br />
           <div>You will receive an email with a 5 digit code.</div>
-          <div>
+          <br />
+          <div style={{ fontWeight: "800" }}>
             Please kindly show the code to the officer on the D-Day for
             verification
+          </div>
+          <br />
+          <div>
+            If you do not found the code in your inbox, please do check in the
+            Junk/Spam/Important folder!
           </div>
         </div>
       </Modal.Body>

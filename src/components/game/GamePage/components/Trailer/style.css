@@ -33,6 +33,10 @@
   font-size: 3.5vh;
 }
 
+.DetailDescriptionRed span {
+  color: #c4c4c4;
+}
+
 .TrailerTitle {
   text-align: center;
   margin-top: 6vh;

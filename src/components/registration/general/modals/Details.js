@@ -18,18 +18,25 @@ const Details = (props) => {
   const { oneData } = props;
   const { game, date } = props;
   const [error, setError] = useState(false);
+  const [errRes, setErrRes] = useState("");
   const [slotsLeft, setSlotsLeft] = useState({
     availableSlots: 100,
     onPayment: 0,
   });
   let temp = { availableSlots: 100, onPayment: 0 };
   const handleNext = async () => {
+    await axios.put(
+      "https://desolate-cliffs-96244.herokuapp.com/book/expired",
+      {
+        game: game,
+        time: oneData.timeSlot,
+      }
+    );
     await axios
       .get("https://desolate-cliffs-96244.herokuapp.com/book/check", {
         params: { game: game, time: oneData.timeSlot },
       })
       .then((res) => {
-        console.log(res.data);
         setSlotsLeft(res.data);
         temp = res.data;
       });
@@ -150,9 +157,10 @@ const Details = (props) => {
         setShow={setError}
         isValidateEmail={validator.isEmail(newEmail)}
         isValidatePhone={validator.isMobilePhone(newMobile)}
-        isAvailable={oneTick <= slotsLeft.availableSlots - slotsLeft.onPayment}
+        isAvailable={oneTick > slotsLeft.availableSlots - slotsLeft.onPayment}
         availableSlots={slotsLeft.availableSlots}
         onPayment={slotsLeft.onPayment}
+        error={errRes}
       ></Error>
     </>
   );

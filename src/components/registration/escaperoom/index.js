@@ -8,7 +8,6 @@ import Confirmed from "../general/modals/Confirmed";
 import Backdrop from "@mui/material/Backdrop";
 import CircularProgress from "@mui/material/CircularProgress";
 export default function Registration(props) {
-  const { image1, image2, bgImage } = props;
   const [loading, setLoading] = useState(false);
   const [show, setShow] = useState(false);
   const [confirmedShow, setConfirmedShow] = useState(false);

@@ -8,7 +8,8 @@ const Header = () => {
         <div
           className="home-title"
           onClick={() => {
-            navigate("");
+            navigate("/");
+            window.scrollTo({ top: -10000, behavior: "smooth" });
           }}
         >
           <p className="text">HOME</p>
@@ -38,6 +39,7 @@ const Header = () => {
           className="gtd-unsolved-title"
           onClick={() => {
             navigate("/");
+            window.scrollTo({ top: -10000, behavior: "smooth" });
           }}
         >
           <div>
@@ -71,7 +73,7 @@ const Header = () => {
             navigate("/heist");
           }}
         >
-          <p className="text">PREVIEW</p>
+          <p className="text">UPCOMING</p>
         </div>
       </div>
     </div>

@@ -3,12 +3,12 @@
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
-  height: 30vh;
+  height: 35vh;
   padding: 0;
 }
 .ErrorText {
   display: flex;
-  height: 7vh;
+  height: 11vh;
   width: 100%;
   color: white;
   background-color: #cc0000;

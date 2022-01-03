@@ -20,7 +20,6 @@ export default function Registration(props) {
     });
   };
   const [finalShow, setFinalShow] = useState(false);
-
   const [newName, setNewName] = useState("");
   const nameChange = (e) => {
     setNewName(e.target.value);
