@@ -72,7 +72,7 @@ const Details = (props) => {
             <Form.Group>
               <div className="form_body">
                 <Form.Label className="body_headings">
-                  Full Name<span className="asterisk">*</span>
+                  Full Name ^ <span className="asterisk">*</span>{" "}
                 </Form.Label>
                 <Form.Control
                   className="form_control"
@@ -155,6 +155,12 @@ const Details = (props) => {
                 discretion
               </div>
             </Form.Group>
+            <div className="additional">
+              <p>
+                ^ For buyers who've booked any game before, kindly use the same
+                name
+              </p>
+            </div>
           </Form>
         </Modal.Body>
         <Modal.Footer>

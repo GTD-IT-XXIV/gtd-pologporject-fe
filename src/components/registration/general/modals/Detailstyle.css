@@ -6,6 +6,16 @@
   letter-spacing: 0em;
   text-align: left;
 }
+.name-text {
+  font-weight: 400;
+  font-size: 1.3vh;
+}
+.additional {
+  text-align: center;
+  font-size: 1.3vh;
+  margin-top: 1vh;
+  margin-bottom: 0;
+}
 .esc-room span {
   color: red;
   text-align: left;
