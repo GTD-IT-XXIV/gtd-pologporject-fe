@@ -48,7 +48,7 @@ export default function Registration(props) {
     setLoading(true);
     axios
       .get("/book/slot", {
-        params: { game: "Case File" },
+        params: { game: "Misfortune" },
       })
       .then((res) => {
         setData(res.data);
@@ -73,7 +73,7 @@ export default function Registration(props) {
         oneTick={oneTick}
         setOneTick={setOneTick}
         oneData={oneData}
-        game={"Case File"}
+        game={"Misfortune"}
         date={"15 January 2022"}
       />
       <FinalDetails
@@ -87,7 +87,7 @@ export default function Registration(props) {
         price={oneData.price}
         data={data}
         setData={setData}
-        game={"Case File"}
+        game={"Misfortune"}
         time={oneData.timeSlot}
         date={"15 January 2022"}
         setConfirmedShow={setConfirmedShow}
@@ -103,7 +103,7 @@ export default function Registration(props) {
         setOneTick={setOneTick}
         time={oneData.timeSlot}
         date={"15 January 2022"}
-        game={"Case File"}
+        game={"Misfortune"}
       />
       <Backdrop
         sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
