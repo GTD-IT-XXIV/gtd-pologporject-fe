@@ -24,7 +24,7 @@ const Header = () => {
                 navigate("/escaperoom");
               }}
             >
-              DECEPTION
+              THE SACRIFICE
             </div>
             <div
               onClick={() => {
@@ -56,7 +56,7 @@ const Header = () => {
                 navigate("/escaperoom/registration");
               }}
             >
-              DECEPTION
+              THE SACRIFICE
             </div>
             <div
               onClick={() => {

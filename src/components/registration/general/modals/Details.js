@@ -57,11 +57,14 @@ const Details = (props) => {
       setError(true);
     }
   };
+  const splitted = game.split(" ");
   return (
     <>
       <Modal show={show} centered>
         <Modal.Header>
-          <div className="esc-room">{game}</div>
+          <div className="esc-room">
+            {splitted[0]} <span>{splitted[1]}</span>
+          </div>
           <div className="date">
             <div>{date}</div>
             <div>{oneData.timeSlot}</div>

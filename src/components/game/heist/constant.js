@@ -6,7 +6,7 @@ export const heistProps = {
   CountdownProps: {
     date: "January 29, 2022 00:00:00",
     title: "heist",
-    genre: "ACTION | ADVENTURE",
+    genre: "ACTION",
     CTAText: "BUY TICKET",
     image: image,
     link: "/heist/registration",
@@ -15,7 +15,7 @@ export const heistProps = {
     duration: "2 hours",
     difficulty: "•••••",
     capacity: "5 person(s)",
-    videoId: "MzznUfFGcOg",
+    videoId: "comingsoon",
   },
   SynopsisProps: {
     synopsis:

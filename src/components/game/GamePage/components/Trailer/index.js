@@ -1,6 +1,7 @@
 import React from "react";
-import YouTube from "react-youtube";
+import image from "../../../../common/comingsoon/assets/Thun.gif";
 import "./style.css";
+import "../../../../common/comingsoon/style.css";
 const Trailer = ({ duration, difficulty, capacity, videoId }) => {
   const _onReady = (event) => {
     // access to player in all event handlers via event.target
@@ -35,20 +36,24 @@ const Trailer = ({ duration, difficulty, capacity, videoId }) => {
             WATCH THE <span className="TrailerTitleRed">TRAILER</span>
           </div>
           <div className="TrailerVideoDiv">
-            {/* <YouTube
-              videoId={videoId}
-              opts={opts}
-              onReady={_onReady}
-              className={"TrailerVideo"}
-            /> */}
-            <iframe
-              className="TrailerVideo"
-              src={`https://www.youtube.com/embed/${videoId}`}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              title="Embedded youtube"
-            />
+            {videoId === "comingsoon" ? (
+              <div
+                className="ComingSoonSection"
+                style={{ backgroundImage: `url(${image})` }}
+                data-aos="zoom-in"
+              >
+                <h1 className="ComingSoonTitle">Coming Soon</h1>
+              </div>
+            ) : (
+              <iframe
+                className="TrailerVideo"
+                src={`https://www.youtube.com/embed/${videoId}`}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                title="Embedded youtube"
+              />
+            )}
           </div>
         </div>
       </div>

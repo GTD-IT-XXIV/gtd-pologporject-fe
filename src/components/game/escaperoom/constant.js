@@ -3,7 +3,7 @@ import image from "./assets/image.gif";
 export const escapeRoomProps = {
   CountdownProps: {
     date: "January 15, 2022 00:00:00",
-    title: "deception",
+    title: "the sacrifice",
     genre: "HORROR",
     CTAText: "BUY TICKET",
     image: image,
