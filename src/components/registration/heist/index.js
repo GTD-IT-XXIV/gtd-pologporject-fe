@@ -51,7 +51,7 @@ export default function Registration(props) {
 
     setLoading(true);
     axios
-      .get("https://desolate-cliffs-96244.herokuapp.com/book/slot", {
+      .get("/book/slot", {
         params: { game: "Heist" },
       })
       .then((res) => {

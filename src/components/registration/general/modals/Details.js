@@ -26,15 +26,12 @@ const Details = (props) => {
   });
   let temp = { availableSlots: 100, onPayment: 0 };
   const handleNext = async () => {
-    await axios.put(
-      "https://desolate-cliffs-96244.herokuapp.com/book/expired",
-      {
-        game: game,
-        time: oneData.timeSlot,
-      }
-    );
+    await axios.put("/book/expired", {
+      game: game,
+      time: oneData.timeSlot,
+    });
     await axios
-      .get("https://desolate-cliffs-96244.herokuapp.com/book/check", {
+      .get("/book/check", {
         params: { game: game, time: oneData.timeSlot },
       })
       .then((res) => {

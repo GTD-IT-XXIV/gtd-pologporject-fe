@@ -160,6 +160,7 @@
   align-items: center;
   padding: 0.5vw;
   margin-top: 1vh;
+  cursor: pointer;
 }
 .checkboxTick {
   width: 5%;

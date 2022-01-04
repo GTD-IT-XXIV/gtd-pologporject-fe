@@ -43,20 +43,18 @@ const FinalDetails = (props) => {
     };
   }, [change]);
   const handlePayment = async () => {
-    const checkSlots = await axios.get(
-      "https://desolate-cliffs-96244.herokuapp.com/book/check",
-      {
-        params: { game: game, time: time },
-      }
-    );
+    const checkSlots = await axios.get("/book/check", {
+      params: { game: game, time: time },
+    });
     if (oneTick > checkSlots.data.availableSlots - checkSlots.data.onPayment) {
       setSlotsLeft(checkSlots.data);
       setError(true);
     } else {
-      await axios.put(
-        "https://desolate-cliffs-96244.herokuapp.com/book/onPayment",
-        { game: game, time: time, ticket: oneTick }
-      );
+      await axios.put("/book/onPayment", {
+        game: game,
+        time: time,
+        ticket: oneTick,
+      });
       const config = {
         headers: {
           "X-BUSINESS-API-KEY":
@@ -100,30 +98,24 @@ const FinalDetails = (props) => {
           {
             onClose: async () => {
               setLoading(true);
-              await axios.put(
-                "https://desolate-cliffs-96244.herokuapp.com/book/offPayment",
-                {
-                  game: game,
-                  time: time,
-                  ticket: oneTick,
-                }
-              );
+              await axios.put("/book/offPayment", {
+                game: game,
+                time: time,
+                ticket: oneTick,
+              });
               setChange(change + 1);
               setTimeout(async () => {
                 try {
-                  const getPayment = await axios.put(
-                    "https://desolate-cliffs-96244.herokuapp.com/book",
-                    {
-                      name: newName,
-                      email: newEmail,
-                      ticket: oneTick,
-                      game: game,
-                      amount: totalPrice,
-                      payment: postPayment.data.id,
-                      time: time,
-                      date: date,
-                    }
-                  );
+                  const getPayment = await axios.put("/book", {
+                    name: newName,
+                    email: newEmail,
+                    ticket: oneTick,
+                    game: game,
+                    amount: totalPrice,
+                    payment: postPayment.data.id,
+                    time: time,
+                    date: date,
+                  });
                   setConfirmedShow(true);
                   let newData = [];
                   for (let i = 0; i < data.length; i++) {
@@ -153,14 +145,11 @@ const FinalDetails = (props) => {
           method: "paynow_online",
         });
       } catch (err) {
-        await axios.put(
-          "https://desolate-cliffs-96244.herokuapp.com/book/offPayment",
-          {
-            game: game,
-            time: time,
-            ticket: oneTick,
-          }
-        );
+        await axios.put("/book/offPayment", {
+          game: game,
+          time: time,
+          ticket: oneTick,
+        });
         setErrRes(err.response.data);
         setError(true);
       }

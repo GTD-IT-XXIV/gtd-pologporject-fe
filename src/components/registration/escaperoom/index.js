@@ -48,7 +48,7 @@ export default function Registration(props) {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("https://desolate-cliffs-96244.herokuapp.com/book/slot", {
+      .get("/book/slot", {
         params: { game: "Escape Room" },
       })
       .then((res) => {
