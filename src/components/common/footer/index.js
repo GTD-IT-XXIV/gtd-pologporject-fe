@@ -1,16 +1,14 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import FacebookLogo from "./assets/FacebookLogo";
 import InstagramLogo from "./assets/InstagramLogo";
 import "./style.css";
 const Footer = () => {
-  const navigate = useNavigate();
   return (
     <div className="Footer">
       <div
         className="GTD"
         onClick={() => {
-          navigate("");
+          window.scrollTo({ top: -10000, behavior: "smooth" });
         }}
       >
         <div>
