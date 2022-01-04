@@ -70,7 +70,7 @@ const FinalDetails = (props) => {
       params.append("name", `${newName}`);
       params.append("email", `${newEmail}`);
       params.append("phone", `${newMobile}`);
-      params.append("purpose", `Reserve ${oneTick} slots for ${game}`);
+      params.append("purpose", `Reserve ${oneTick} slot(s) for ${game}`);
       params.append("send_email", true);
       params.append("expires_in", "5 mins");
       params.append(
