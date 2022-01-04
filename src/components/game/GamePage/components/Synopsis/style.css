@@ -1,6 +1,6 @@
 .SynopsisSection {
   width: 100%;
-  height: 73vh;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,7 +34,7 @@
     font-size: 4vh;
   }
   .SynopsisText {
-    text-align: justify;
+    text-align: center;
     font-size: 2.05vh;
   }
 }

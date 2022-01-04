@@ -25,7 +25,7 @@ const RegisPage = (props) => {
         data-aos="zoom-in"
       >
         <div className="pic-text">
-          <div className="monte">deception</div>
+          <div className="monte">the sacrifice</div>
           <div className="horror">HORROR</div>
         </div>
       </div>
