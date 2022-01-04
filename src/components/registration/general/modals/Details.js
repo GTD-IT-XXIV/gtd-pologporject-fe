@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Detailstyle.css";
 import Minus from "../assets/Minus";
@@ -19,6 +19,7 @@ const Details = (props) => {
   const { game, date } = props;
   const [error, setError] = useState(false);
   const [errRes, setErrRes] = useState("");
+  const [checked, setChecked] = useState(false);
   const [slotsLeft, setSlotsLeft] = useState({
     availableSlots: 100,
     onPayment: 0,
@@ -47,7 +48,8 @@ const Details = (props) => {
       newMobile !== "" &&
       validator.isMobilePhone(newMobile) &&
       oneTick !== 0 &&
-      temp.availableSlots - temp.onPayment >= oneTick
+      temp.availableSlots - temp.onPayment >= oneTick &&
+      checked
     ) {
       setShow(false);
       setFinalShow(true);
@@ -136,6 +138,23 @@ const Details = (props) => {
                 </div>
               </div>
             </div>
+            <Form.Group
+              className="checkbox"
+              onClick={() => {
+                setChecked(!checked);
+              }}
+            >
+              <Form.Check
+                checked={checked}
+                className="checkboxTick"
+              ></Form.Check>
+              <div className="checkboxText">
+                By filling this form, I hereby declare my consent for GTD to
+                collect my personal information. I fully understand that the
+                data collected may be used for further processing under GTD's
+                discretion
+              </div>
+            </Form.Group>
           </Form>
         </Modal.Body>
         <Modal.Footer>
@@ -161,6 +180,7 @@ const Details = (props) => {
         availableSlots={slotsLeft.availableSlots}
         onPayment={slotsLeft.onPayment}
         error={errRes}
+        checked={checked}
       ></Error>
     </>
   );

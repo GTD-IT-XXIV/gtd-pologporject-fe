@@ -141,4 +141,20 @@
   .text {
     font-size: 2vw;
   }
+  .home-title {
+    width: 18%;
+  }
+  .now-playing {
+    width: 18%;
+  }
+  .gtd-unsolved-title {
+    text-align: center;
+    width: 28%;
+  }
+  .buy-tickets {
+    width: 18%;
+  }
+  .promo-title {
+    width: 18%;
+  }
 }

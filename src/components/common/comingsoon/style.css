@@ -21,3 +21,9 @@
   color: white;
   font-size: 4vw;
 }
+
+@media screen and (max-width: 768px) {
+  .ComingSoonTitle {
+    font-size: 12vw;
+  }
+}

@@ -73,9 +73,11 @@
   .TitleSubSection {
     background-position: center;
     background-size: cover;
+    height: 90%;
   }
   .TitleSection {
     height: 100vh;
+    align-items: flex-start;
   }
   .Title {
     margin-top: 8vh;

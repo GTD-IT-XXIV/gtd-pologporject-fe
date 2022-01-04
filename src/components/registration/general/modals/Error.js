@@ -12,6 +12,7 @@ export default function Error(props) {
     error,
     availableSlots,
     onPayment,
+    checked,
   } = props;
 
   const theError = isValidatePhone
@@ -21,7 +22,9 @@ export default function Error(props) {
         : error === "Cannot read property 'payment_request_id' of null" ||
           error === "payment not found"
         ? "fail"
-        : "fill"
+        : checked
+        ? "fill"
+        : "checked"
       : "email"
     : "mobile";
   const errorMessage = {
@@ -30,6 +33,7 @@ export default function Error(props) {
     fill: "Please fill in the details",
     full: `Your booking exceeded the available slots. Available Slots: ${availableSlots}, Ongoing Payments: ${onPayment}.`,
     fail: "Payment not success!",
+    checked: "Please indicate you have agreed to the terms and condition",
   };
   return (
     <Modal show={show} centered>

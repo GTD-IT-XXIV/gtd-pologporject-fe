@@ -140,9 +140,9 @@ const FinalDetails = (props) => {
                   setData(newData);
                   setLoading(false);
                 } catch (err) {
+                  setErrRes(err.response.data);
                   setLoading(false);
                   setError(true);
-                  setErrRes(err.response.data);
                 }
               }, 3000);
             },
@@ -153,8 +153,6 @@ const FinalDetails = (props) => {
           method: "paynow_online",
         });
       } catch (err) {
-        setErrRes(err.response.data);
-        setError(true);
         await axios.put(
           "https://desolate-cliffs-96244.herokuapp.com/book/offPayment",
           {
@@ -163,6 +161,8 @@ const FinalDetails = (props) => {
             ticket: oneTick,
           }
         );
+        setErrRes(err.response.data);
+        setError(true);
       }
     }
   };
@@ -230,6 +230,18 @@ const FinalDetails = (props) => {
             <div className="tickets_heading">Total Amount</div>
             <div className="final_form_control">{totalPrice} SGD</div>
           </div>
+
+          <div className="phone_viewer">
+            <p>For phone viewers,</p>
+            <ul className="lists">
+              <li>Save QR Code as image</li>
+              <li>Import image to your PayNow App</li>
+            </ul>
+            <p>
+              For OCBC Pay Anyone, it should be the 3 lines on the top right
+              corner
+            </p>
+          </div>
         </Modal.Body>
         <Modal.Footer>
           <button
@@ -261,6 +273,7 @@ const FinalDetails = (props) => {
         availableSlots={slotsLeft.availableSlots}
         onPayment={slotsLeft.onPayment}
         error={errRes}
+        checked={true}
       ></Error>
     </>
   );
