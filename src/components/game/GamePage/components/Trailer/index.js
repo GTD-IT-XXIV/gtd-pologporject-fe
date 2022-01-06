@@ -5,13 +5,13 @@ import "../../../../common/comingsoon/style.css";
 const Trailer = ({ duration, difficulty, capacity, videoId }) => {
   return (
     <div>
-      <div className="GameDetailSection" data-aos="fade-up">
-        <div className="Details">
+      <div className="GameDetailSection">
+        <div className="Details" data-aos="fade-up">
           <div className="DetailTitle">Duration</div>
           <div className="DetailDescription">{duration}</div>
         </div>
 
-        <div className="Details">
+        <div className="Details" data-aos="fade-up">
           <div className="DetailTitle">Difficulty</div>
           <div className="DetailDescriptionRed">
             {difficulty}
@@ -19,7 +19,7 @@ const Trailer = ({ duration, difficulty, capacity, videoId }) => {
           </div>
         </div>
 
-        <div className="Details">
+        <div className="Details" data-aos="fade-up">
           <div className="DetailTitle">Capacity</div>
           <div className="DetailDescription">{capacity}</div>
         </div>
@@ -27,7 +27,7 @@ const Trailer = ({ duration, difficulty, capacity, videoId }) => {
           <div className="TrailerTitle">
             WATCH THE <span className="TrailerTitleRed">TRAILER</span>
           </div>
-          <div className="TrailerVideoDiv">
+          <div className="TrailerVideoDiv" data-aos="fade-up">
             {videoId === "comingsoon" ? (
               <div
                 className="ComingSoonSection"

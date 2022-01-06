@@ -11,17 +11,14 @@ const GameDisplay = ({ divRef }) => {
   const navigate = useNavigate();
 
   return (
-    <div
-      className="GamesDisplaySection"
-      ref={divRef}
-      data-aos="fade-up"
-      data-aos-duration="1000"
-    >
+    <div className="GamesDisplaySection" ref={divRef}>
       <div
         className="GamesDisplay"
         onClick={() => {
           navigate("escaperoom");
         }}
+        data-aos="fade-up"
+        data-aos-duration="1000"
       >
         <div
           className="GamesImage"
@@ -40,6 +37,8 @@ const GameDisplay = ({ divRef }) => {
         onClick={() => {
           navigate("casefile");
         }}
+        data-aos="fade-up"
+        data-aos-duration="1000"
       >
         <div
           className="GamesImage"
@@ -58,6 +57,8 @@ const GameDisplay = ({ divRef }) => {
         onClick={() => {
           navigate("heist");
         }}
+        data-aos="fade-up"
+        data-aos-duration="1000"
       >
         <div
           className="GamesImage"
