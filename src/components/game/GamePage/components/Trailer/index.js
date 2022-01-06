@@ -3,14 +3,6 @@ import image from "../../../../common/comingsoon/assets/Thun.gif";
 import "./style.css";
 import "../../../../common/comingsoon/style.css";
 const Trailer = ({ duration, difficulty, capacity, videoId }) => {
-  const _onReady = (event) => {
-    // access to player in all event handlers via event.target
-    event.target.pauseVideo();
-  };
-  const opts = {
-    height: "500",
-    width: "800",
-  };
   return (
     <div>
       <div className="GameDetailSection" data-aos="fade-up">

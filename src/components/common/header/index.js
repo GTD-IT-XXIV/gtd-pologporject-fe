@@ -70,10 +70,10 @@ const Header = () => {
         <div
           className="promo-title"
           onClick={() => {
-            navigate("/heist");
+            navigate("/promotion");
           }}
         >
-          <p className="text">UPCOMING</p>
+          <p className="text">PROMO</p>
         </div>
       </div>
     </div>

@@ -1,0 +1,14 @@
+.Container {
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-family: Poppins;
+}
+.Title {
+  font-family: "Men of Nihilist", sans-serif;
+  font-size: 6vh;
+}
+.TitleRed {
+  color: red;
+}

@@ -43,7 +43,7 @@ const RegisPage = (props) => {
         </div>
         <div className="Price">
           <div className="bolted_text">Price</div>
-          <div className="non_bolted_text">Individual: $6.5/Person</div>
+          <div className="non_bolted_text">Individual: $7.5/Person</div>
         </div>
       </div>
       <div className="timeslot" data-aos="zoom-in" data-aos-duration="1250">

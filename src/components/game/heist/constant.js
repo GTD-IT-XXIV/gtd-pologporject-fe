@@ -1,6 +1,4 @@
 import image from "./assets/image.gif";
-import bear from "./assets/bear.png";
-import bear2 from "./assets/bear2.png";
 
 export const heistProps = {
   CountdownProps: {
