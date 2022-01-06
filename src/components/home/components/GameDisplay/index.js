@@ -15,7 +15,7 @@ const GameDisplay = ({ divRef }) => {
       className="GamesDisplaySection"
       ref={divRef}
       data-aos="fade-up"
-      data-aos-duration="2000"
+      data-aos-duration="1000"
     >
       <div
         className="GamesDisplay"

@@ -9,7 +9,9 @@ const Title = ({ onClick }) => {
         <div className="Title">
           <div className="TitleReady">READY</div>
           <div className="TitleSolve">TO SOLVE THE</div>
-          <div className="TitleUnsolved">UNSOLVED?</div>
+          <div className="TitleUnsolved" onClick={onClick}>
+            UNSOLVED?
+          </div>
         </div>
         <DownArrow onClick={onClick} />
       </div>
