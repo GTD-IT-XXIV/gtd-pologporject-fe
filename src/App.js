@@ -4,6 +4,7 @@ import Navigation from "./components/common/routes";
 import Scripts from "./scripts";
 import Footer from "./components/common/footer";
 import Header from "./components/common/header";
+import "./App.css";
 
 function App() {
   document.body.style = "background: black;";

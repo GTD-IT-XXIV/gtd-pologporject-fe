@@ -29,11 +29,6 @@ export default function Scripts() {
         rel="stylesheet"
       ></link>
       <link
-        href="//db.onlinewebfonts.com/c/42f03d3f5ef63d802f9472a7e4ea10dd?family=Men+of+Nihilist"
-        rel="stylesheet"
-        type="text/css"
-      />
-      <link
         href="https://unpkg.com/aos@2.3.1/dist/aos.css"
         rel="stylesheet"
       ></link>
