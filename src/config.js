@@ -1,3 +1,3 @@
-const baseURL = "https://desolate-cliffs-96244.herokuapp.com";
+const baseURL = "https://gtdunsolved2022-service.pintugtd.com";
 
 export default baseURL;

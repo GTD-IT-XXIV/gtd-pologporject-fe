@@ -32,8 +32,8 @@ const FinalDetails = (props) => {
   useEffect(() => {
     const script = document.createElement("script");
 
-    script.src = "https://sandbox.hit-pay.com/hitpay.js";
-    // script.src = "https://hit-pay.com/hitpay.js";
+    // script.src = "https://sandbox.hit-pay.com/hitpay.js";
+    script.src = "https://hit-pay.com/hitpay.js";
     script.async = true;
 
     document.body.appendChild(script);
@@ -58,8 +58,8 @@ const FinalDetails = (props) => {
       const config = {
         headers: {
           "X-BUSINESS-API-KEY":
-            "2e75e1e03e88d65e8dbc0ef36ee1a3b94ec7bdffe7ffdeccb8004ed4dd0306f3",
-          // "647961d39123d34ebad53fe0e635b0a72fffbe71062a5a68855e2c852da5e86c",
+            // "2e75e1e03e88d65e8dbc0ef36ee1a3b94ec7bdffe7ffdeccb8004ed4dd0306f3",
+            "647961d39123d34ebad53fe0e635b0a72fffbe71062a5a68855e2c852da5e86c",
           "Content-Type": "application/x-www-form-urlencoded",
           "X-Requested-With": "XMLHttpRequest",
         },
@@ -75,27 +75,27 @@ const FinalDetails = (props) => {
       params.append("expires_in", "5 mins");
       params.append(
         "webhook",
-        "https://desolate-cliffs-96244.herokuapp.com/webhook"
+        "https://gtdunsolved2022-service.pintugtd.com/webhook"
       );
       try {
         const postPayment = await axios.post(
-          "https://api.sandbox.hit-pay.com/v1/payment-requests",
-          // "https://api.hit-pay.com/v1/payment-requests",
+          // "https://api.sandbox.hit-pay.com/v1/payment-requests",
+          "https://api.hit-pay.com/v1/payment-requests",
           params,
           config
         );
         window.HitPay.init(
           postPayment.data.url,
-          {
-            domain: "sandbox.hit-pay.com",
-            apiDomain: "sandbox.hit-pay.com",
-            closeOnError: true,
-          },
           // {
-          //   domain: "hit-pay.com",
-          //   apiDomain: "hit-pay.com",
+          //   domain: "sandbox.hit-pay.com",
+          //   apiDomain: "sandbox.hit-pay.com",
           //   closeOnError: true,
           // },
+          {
+            domain: "hit-pay.com",
+            apiDomain: "hit-pay.com",
+            closeOnError: true,
+          },
           {
             onClose: async () => {
               setLoading(true);
@@ -230,6 +230,13 @@ const FinalDetails = (props) => {
             <p>
               For OCBC Pay Anyone, it should be the 3 lines on the top right
               corner
+            </p>
+          </div>
+
+          <div className="warning">
+            <p>
+              Please do not close the payment pop-up! <br />
+              Let it close automatically.
             </p>
           </div>
         </Modal.Body>
