@@ -6,6 +6,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./Detailstyle.css";
 import Minus from "../assets/Minus";
 import Plus from "../assets/Plus";
+import PlusDis from "../assets/Plusdis";
+import MinusDis from "../assets/Minusdis";
 import Error from "./Error";
 import axios from "axios";
 import validator from "validator";
@@ -111,30 +113,37 @@ const Details = (props) => {
               <div className="one-ticket">
                 <div className="tickets_heading">Single Tickets</div>
                 <div className="tickets_number">
-                  <Minus
-                    onClick={(e) => {
-                      e.preventDefault();
-                      if (oneTick <= 1) {
-                        return;
-                      } else {
-                        setOneTick(oneTick - 1);
-                      }
-                    }}
-                  />
-
+                  {oneTick <= 1 ? (
+                    <MinusDis />
+                  ) : (
+                    <Minus
+                      onClick={(e) => {
+                        e.preventDefault();
+                        if (oneTick <= 1) {
+                          return;
+                        } else {
+                          setOneTick(oneTick - 1);
+                        }
+                      }}
+                    />
+                  )}
                   <div className="rectangle">
                     <div className="tickets_shown">{oneTick}</div>
                   </div>
-                  <Plus
-                    onClick={(e) => {
-                      e.preventDefault();
-                      if (oneTick >= oneData.availableSlots) {
-                        return;
-                      } else {
-                        setOneTick(oneTick + 1);
-                      }
-                    }}
-                  />
+                  {oneTick >= oneData.availableSlots ? (
+                    <PlusDis />
+                  ) : (
+                    <Plus
+                      onClick={(e) => {
+                        e.preventDefault();
+                        if (oneTick >= oneData.availableSlots) {
+                          return;
+                        } else {
+                          setOneTick(oneTick + 1);
+                        }
+                      }}
+                    />
+                  )}
                 </div>
               </div>
             </div>
