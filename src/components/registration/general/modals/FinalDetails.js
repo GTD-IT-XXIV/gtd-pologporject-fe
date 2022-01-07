@@ -72,7 +72,6 @@ const FinalDetails = (props) => {
       params.append("phone", `${newMobile}`);
       params.append("purpose", `Reserve ${oneTick} slot(s) for ${game}`);
       params.append("send_email", true);
-      params.append("expires_in", "5 mins");
       params.append(
         "webhook",
         "https://gtdunsolved2022-service.pintugtd.com/webhook"
