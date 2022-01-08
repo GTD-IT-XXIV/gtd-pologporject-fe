@@ -25,9 +25,9 @@ export const casefileProps = {
   CharacterProps: {
     pages: [
       [
-        { image: orang3, name: "Huang Yixiang" },
+        { image: orang3, name: "Huang Yongfei" },
         { image: orang1, name: "Siti" },
-        { image: orang2, name: "Huang Yongfei" },
+        { image: orang2, name: "Huang Yixiang" },
       ],
     ],
   },
