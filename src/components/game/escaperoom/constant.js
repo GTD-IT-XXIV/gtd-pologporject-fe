@@ -17,6 +17,6 @@ export const escapeRoomProps = {
   },
   SynopsisProps: {
     synopsis:
-      "It was a cold, dreary night at the chateaux. Not a breeze could be heard before suddenly, you hear the front door blasted shut. Mysterious symbols and a sense of eerie could be felt in the air, on the walls, in your skin. Symbols and puzzles briskly appear waiting to be deciphered. Slowly, you realize that you have to play by their rules. One false move and they’ll come after you. Will you able to escape?",
+      "It was a cold, dreary night at the chateaux. Not a breeze could be heard before suddenly, you hear the front door blasted shut. Mysterious symbols and a sense of eerie could be felt in the air, on the walls, in your skin. Symbols and puzzles briskly appear waiting to be deciphered. Slowly, you realize that you have to play by their rules. One false move and they’ll come after you.<br /><br /> Will you able to escape?",
   },
 };

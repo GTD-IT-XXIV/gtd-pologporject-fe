@@ -78,7 +78,7 @@
 
 @media screen and (max-width: 968px) {
   .GameDetailSection {
-    height: 100vh;
+    height: 105vh;
   }
   .DetailDescription {
     font-size: 3vh;

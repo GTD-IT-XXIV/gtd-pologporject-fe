@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import ReactHtmlParser from "react-html-parser";
 const Synopsis = ({ synopsis }) => {
   return (
     <div className="SynopsisSection">
@@ -7,7 +8,7 @@ const Synopsis = ({ synopsis }) => {
         THE <span className="SynopsisTitleRed">SYNOPSIS</span>
       </div>
       <div className="SynopsisText" data-aos="zoom-in">
-        {synopsis}
+        {ReactHtmlParser(synopsis)}
       </div>
     </div>
   );

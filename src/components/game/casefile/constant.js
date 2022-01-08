@@ -20,7 +20,7 @@ export const casefileProps = {
   },
   SynopsisProps: {
     synopsis:
-      "On one night, the children of a retired business owner of a multimillion dollar company came to visit their parents at home for a family dinner. It was a very warm and comforting night, until the police received a call at midnight. There mourns a family, upon an unfortunate passing of the retired business owner, a father of two, a beloved husband, and a great leader. The burden is bestowed on, YOU,  the newly recruited police officers, will you be able to find the clues to trace the murderer amongst the suspects, and bring closure to the family that was left behind?",
+      "On one night, the children of a retired business owner of a multimillion dollar company came to visit their parents at home for a family dinner. It was a very warm and comforting night, until the police received a call at midnight. There mourns a family, upon an unfortunate passing of the retired business owner, a father of two, a beloved husband, and a great leader.<br/ ><br /> The burden is bestowed on <b>YOU</b> the newly recruited police officers, will you be able to find the clues to trace the murderer amongst the suspects, and bring closure to the family that was left behind?",
   },
   CharacterProps: {
     pages: [
