@@ -13,6 +13,7 @@
   font-size: 1.75vw;
   letter-spacing: 0em;
   margin: 0;
+  text-align: center;
 }
 .headers {
   display: flex;
@@ -28,14 +29,17 @@
   text-align: center;
   cursor: pointer;
   transition: 0.5s;
+  width: 18%;
 }
 .home-title:hover {
   color: red;
 }
+.buy-tickets {
+  width: 18%;
+}
 .buy-tickets-title {
   text-align: center;
   cursor: pointer;
-  transition: 0.5s;
 }
 .buy-tickets-title:hover {
   color: red;
@@ -43,15 +47,18 @@
 .promo-title {
   text-align: center;
   cursor: pointer;
-  transition: 0.5s;
+  width: 18%;
 }
 .promo-title:hover {
   color: red;
 }
+.now-playing {
+  width: 18%;
+}
 .now-playing-title {
   text-align: center;
   cursor: pointer;
-  transition: 0.5s;
+  overflow: hidden;
 }
 .now-playing-title:hover {
   color: red;
@@ -60,6 +67,8 @@
   font-family: "Men of Nihilist", sans-serif;
   font-size: 3.25vw;
   cursor: pointer;
+  width: 28%;
+  text-align: center;
 }
 .gtd-unsolved-title span {
   transition: 0.5s;
@@ -128,6 +137,52 @@
 }
 .buy-tickets-dropdown div:hover {
   background-color: #380000;
+}
+.old,
+.new {
+  display: block;
+  overflow: hidden;
+  transition: all 500ms ease-in-out;
+}
+.new {
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+.old {
+  height: auto;
+  width: auto;
+  opacity: 1;
+}
+.now-playing:hover .new {
+  opacity: 1;
+  height: auto;
+  width: auto;
+}
+.now-playing:hover .old {
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+.buy-tickets:hover .new {
+  opacity: 1;
+  height: auto;
+  width: auto;
+}
+.buy-tickets:hover .old {
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+.promo-title:hover .new {
+  opacity: 1;
+  height: auto;
+  width: auto;
+}
+.promo-title:hover .old {
+  opacity: 0;
+  height: 0;
+  width: 0;
 }
 
 @media screen and (max-width: 768px) {

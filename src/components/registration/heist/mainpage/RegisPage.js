@@ -26,7 +26,7 @@ const RegisPage = (props) => {
       >
         <div className="pic-text">
           <div className="monte">heist</div>
-          <div className="horror">HORROR</div>
+          <div className="horror">ACTION</div>
         </div>
       </div>
       <div className="info" data-aos="fade-up">

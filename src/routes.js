@@ -59,8 +59,8 @@ export const routes = [
   },
   {
     id: 9,
-    name: "Coming Soon",
+    name: "Sold Out",
     component: <ComingSoon></ComingSoon>,
-    path: "/comingsoon",
+    path: "/soldout",
   },
 ];

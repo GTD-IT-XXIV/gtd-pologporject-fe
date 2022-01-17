@@ -9,8 +9,8 @@ export default function ComingSoon() {
       data-aos="zoom-in"
     >
       <div>
-        <h1 className="ComingSoonTitle">Coming Soon</h1>
-        <h3 className="ComingSoonText">See you when it is open!</h3>
+        <h1 className="ComingSoonTitle">SOLD OUT</h1>
+        <h3 className="ComingSoonText">Thank you and see you next time!</h3>
       </div>
     </div>
   );

@@ -7,7 +7,6 @@ import RegisPage from "./mainpage/RegisPage";
 import Confirmed from "../general/modals/Confirmed";
 import Backdrop from "@mui/material/Backdrop";
 import CircularProgress from "@mui/material/CircularProgress";
-import { useNavigate } from "react-router";
 export default function Registration(props) {
   const [loading, setLoading] = useState(false);
   const [show, setShow] = useState(false);
@@ -45,10 +44,8 @@ export default function Registration(props) {
     availableSlots: 0,
     price: 0,
   });
-  const navigate = useNavigate();
-  useEffect(() => {
-    navigate("/comingsoon");
 
+  useEffect(() => {
     setLoading(true);
     axios
       .get("/book/slot", {

@@ -1,8 +1,11 @@
 import { useEffect } from "react";
 import "./style.css";
+import { useNavigate } from "react-router";
 
 export default function Promo(props) {
+  const navigate = useNavigate();
   useEffect(() => {
+    navigate("/soldout");
     window.scrollTo({ top: -5000, behavior: "smooth" });
   }, []);
   return (

@@ -15,10 +15,18 @@ const Header = () => {
           <p className="text">HOME</p>
         </div>
         <div className="now-playing">
-          <div className="now-playing-title">
-            <p className="text">NOW PLAYING</p>
+          <div
+            className="now-playing-title"
+            onClick={() => {
+              navigate("/heist");
+            }}
+          >
+            <p className="text">
+              <span className="old">NOW PLAYING</span>
+              <span className="new">HEIST</span>
+            </p>
           </div>
-          <div className="dropdown">
+          {/* <div className="dropdown">
             <div
               onClick={() => {
                 navigate("/escaperoom");
@@ -33,7 +41,7 @@ const Header = () => {
             >
               MISFORTUNE
             </div>
-          </div>
+          </div> */}
         </div>
         <div
           className="gtd-unsolved-title"
@@ -47,10 +55,18 @@ const Header = () => {
           </div>
         </div>
         <div className="buy-tickets">
-          <div className="buy-tickets-title">
-            <p className="text">BUY TICKETS</p>
+          <div
+            className="buy-tickets-title"
+            onClick={() => {
+              navigate("/heist/registration");
+            }}
+          >
+            <p className="text">
+              <span className="old">BUY TICKETS</span>
+              <span className="new">HEIST</span>
+            </p>
           </div>
-          <div className="buy-tickets-dropdown">
+          {/* <div className="buy-tickets-dropdown">
             <div
               onClick={() => {
                 navigate("/escaperoom/registration");
@@ -65,7 +81,7 @@ const Header = () => {
             >
               MISFORTUNE
             </div>
-          </div>
+          </div> */}
         </div>
         <div
           className="promo-title"
@@ -73,7 +89,10 @@ const Header = () => {
             navigate("/promotion");
           }}
         >
-          <p className="text">PROMO</p>
+          <p className="text">
+            <span className="old">PROMO</span>
+            <span className="new">EXPIRED</span>
+          </p>
         </div>
       </div>
     </div>
