@@ -209,4 +209,7 @@
     width: 90%;
     font-size: 3vw;
   }
+  .back_to_main_button {
+    width: 100%;
+  }
 }
