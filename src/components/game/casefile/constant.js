@@ -2,6 +2,8 @@ import image from "./assets/image.gif";
 import orang1 from "./assets/Case-File-CharacterArtboard-1.png";
 import orang2 from "./assets/Case-File-CharacterArtboard-2.png";
 import orang3 from "./assets/Case-File-CharacterArtboard-3.png";
+import bear from "./assets/bear.png";
+import bear2 from "./assets/bear2.png";
 
 export const casefileProps = {
   CountdownProps: {
@@ -28,6 +30,16 @@ export const casefileProps = {
         { image: orang3, name: "Huang Yongfei" },
         { image: orang1, name: "Siti" },
         { image: orang2, name: "Huang Yixiang" },
+      ],
+      [
+        { image: bear, name: "Panda" },
+        { image: bear, name: "Bear" },
+        { image: bear, name: "Wolf" },
+      ],
+      [
+        { image: bear2, name: "We" },
+        { image: bear2, name: "Bare" },
+        { image: bear2, name: "Bears" },
       ],
     ],
   },
